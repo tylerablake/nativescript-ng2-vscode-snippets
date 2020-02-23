@@ -6,9 +6,11 @@ This JSON file contains snippets for all NativeScript UI components and some fre
 
 All UI components are prefixed with ```ns```. Attributes do not have a prefix.
 
-![Preview](https://cdn.filestackcontent.com/IcTER9raRgCi8nCQeOZu?v=0)
+<!-- ![Preview](https://cdn.filestackcontent.com/IcTER9raRgCi8nCQeOZu?v=0) -->
 
-###UI Components
+
+
+### UI Components
 
 #### From within TypeScript `Component` Files:
 
@@ -48,7 +50,7 @@ The following can be used inside both TypeScript and HTML view files:
 - List View - ```nslistview```
 - Web View - ```nswebview```
 
-###Attributes
+### Attributes
 - cssClass - ```css```
 - text - ```text```
 - icon - ```icon```
@@ -65,8 +67,23 @@ The following can be used inside both TypeScript and HTML view files:
 - col - ```col```
 - width - ```width```
 - height - ```height```
+- ios.position - ```ios.position```
+- ios.systemIcon - ```ios.systemIcon```
+- android.position - ```android.position```
+- android.systemIcon - ```android.systemIcon```
+- iosIconRenderingMode - ```iosIconRenderingMode```
+- iosOverflowSafeArea - ```iosOverflowSafeArea```
+- iosOverflowSafeAreaEnabled - ```iosOverflowSafeAreaEnabled```
 
-## How to use? ##
+### Events
+
+- loaded - ```nsloaded```
+- unloaded - ```nsunloaded```
+- layoutChanged - ```nslayoutChanged```
+- busyChange - ```nsbusychanged```
+
+
+## How to use?
 
 1. Inside Visual Studio Code press
    ```bash
@@ -78,3 +95,55 @@ The following can be used inside both TypeScript and HTML view files:
   ext install nativescript-ng2-snippets
   ```
 3. Hit enter.
+
+
+## Want to contribute?
+
+  1. Fork this repo
+  2. Open the project
+  3. Modify snippets in `html.json` or `typescript.json`
+  4. If using VSCode, hit `F5` to open VSCode debug window
+  5. Then create an `index.html` or `test.ts` file (to test html or ts snippets respectively)
+  6. If all is good then submit a PR!
+
+
+# Release Notes
+## 3.0 Feb 23, 2020
+
+## New Features
+* **Platform Specific ActionItem Support** 
+
+* **Added Dropdown Suggestions**
+
+* **Added Descriptions to Snippets**
+
+* **Added Debug Configuration** To enable the community to help us. To use just hit `F5` and a debug window of VSCode will appear.
+
+* **Updated Readme**
+
+* **New Snippets** We hope you'll enjoy some of the new snippets we've added!
+  - `iosIconRenderingMode` 
+  - `iosOverflowSafeArea`
+  - `iosOverflowSafeAreaEnabled`
+  - `ios.position`
+  - `ios.systemIcon`
+  - `android.position` 
+  - `android.systemIcon`
+  - `nsloaded`
+  - `nsunloaded`
+  - `nslayoutchanged`
+  - `nsbusychanged`
+
+* **Changed Snippets** Take a second to review the snippets that were changed in this release. Let us know if you have any issues or suggestions!
+  - `nsactionbar`
+  - `nsborder` 
+  - `stretch`
+  - `kbtype`
+  - `wrap`  
+  - `halign`
+  - `valign`
+  - `nsloading`
+
+
+## Bug fixes
+* Remove broken link from readme

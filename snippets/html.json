@@ -3,59 +3,86 @@
     "{N} Action Bar": {
         "prefix": "nsactionbar",
         "body": [
-            "<ActionBar title=\"Title\" icon=\"\" class=\"action-bar\">",
+            "<ActionBar title=\"Title\" class=\"action-bar\">",
             "</ActionBar>"
+        ],
+        "description": [
+            "ActionBar Properties:",
+            "- title:string - Gets or sets the action bar title.",
+            "\n - titleView:View - Gets or sets the title view. When set replaces the title with a custom view",
+            "\n"
         ]
     },
-
     "{N} Action Bar with Action Items": {
         "prefix": "nsactionbaritems",
         "body": [
-            "<ActionBar title=\"Title\" icon=\"\" class=\"action-bar\">",
+            "<ActionBar title=\"Title\" class=\"action-bar\">",
             "  <ActionItem (tap)=\"\">",
-            "    <Button class=\"\" text=\"Left\" class=\"action-item\"></Button>",
+            "    <Button text=\"Left\" class=\"action-item\"></Button>",
             "  </ActionItem>",
             "  <ActionItem (tap)=\"\" ios.position=\"right\">",
-            "    <Button class=\"\" text=\"Right\" class=\"action-item\"></Button>",
+            "    <Button text=\"Right\" class=\"action-item\"></Button>",
             "  </ActionItem>",
             "</ActionBar>"
         ]
     },
-
     "{N} Action Item": {
         "prefix": "nsactionitem",
         "body": [
             "<ActionItem (tap)=\"\">",
-            "  <Button class=\"\" text=\"Left\" class=\"action-item\"></Button>",
+            "  <Button text=\"Left\" class=\"action-item\"></Button>",
             "</ActionItem>"
+        ],
+        "description": [
+            "ActionItem Properties:",
+            "- text:string - Gets or sets the text of the action item",
+            "\n - icon:string - Gets or sets the icon of the action item. Supports local images (~/), resources (res://) and icon fonts (fonts://)",
+            "\n - ios.position:enum(left|right) - Sets the position of the item (default value is left)",
+            "\n - android.position:enum(actionBar|popup|actionBarIfRoom) - Sets the position of the item (default value is actionBar)",
+            "\n - ios.systemIcon:number - Sets the icon of the action item while using UIBarButtonSystemIcon enumeration",
+            "\n - android.systemIcon:number - Sets a path to a resource icon ( see the list of Android system drawables)",
+            "\n"
         ]
     },
-
     "{N} Action Item on the Right": {
         "prefix": "nsactionitemright",
         "body": [
             "<ActionItem (tap)=\"\" ios.position=\"right\">",
-            "  <Button class=\"\" text=\"Right\" class=\"action-item\"></Button>",
+            "  <Button text=\"Right\" class=\"action-item\"></Button>",
             "</ActionItem>"
+        ],
+        "description": [
+            "Create an ActionItem with ios.position=\"right\"",
+            "\n ActionItem Properties:",
+            "- text:string - Gets or sets the text of the action item",
+            "\n - icon:string - Gets or sets the icon of the action item. Supports local images (~/), resources (res://) and icon fonts (fonts://)",
+            "\n - ios.position:enum(left|right) - Sets the position of the item (default value is left)",
+            "\n - android.position:enum(actionBar|popup|actionBarIfRoom) - Sets the position of the item (default value is actionBar)",
+            "\n - ios.systemIcon:number - Sets the icon of the action item while using UIBarButtonSystemIcon enumeration",
+            "\n - android.systemIcon:number - Sets a path to a resource icon ( see the list of Android system drawables)",
+            "\n"
         ]
     },
-
     "{N} Action Bar with Back": {
         "prefix": "nsactionbarback",
         "body": [
-            "<ActionBar title=\"Title\" icon=\"\" class=\"action-bar\">",
+            "<ActionBar title=\"Title\" class=\"action-bar\">",
             "  <NavigationButton text=\"Back\" android.systemIcon=\"ic_menu_back\"></NavigationButton>",
             "</ActionBar>"
         ]
     },
-
     "{N} Navigation Button": {
         "prefix": "nsactionbarnavbtn",
         "body": [
             "<NavigationButton text=\"Back\" android.systemIcon=\"ic_menu_back\"></NavigationButton>"
+        ],
+        "description": [
+            "NavigationButton Properties:",
+            "- text:string - Gets or sets the text of the action item.",
+            "\n - icon:string - Gets or sets the icon of the action item",
+            "\n"
         ]
     },
-
     "{N} Action Bar with Custom Title": {
         "prefix": "nsactionbarcustomtitle",
         "body": [
@@ -66,14 +93,132 @@
             "    <Label text=\"$1\" class=\"action-title\"></Label>",
             "  </StackLayout>",
             "  <ActionItem (tap)=\"$2\" ios.position=\"right\">",
-            "    <Button class=\"\" text=\"Right\" class=\"action-item\"></Button>",
+            "    <Button text=\"Right\" class=\"action-item\"></Button>",
             "  </ActionItem>",
             "</ActionBar>"
         ]
     },
 
+
+    // Platform Specific ActionBar Attributes
+    "{N} iOS Icon Rendering Mode": {
+        "prefix": "iosIconRenderingMode",
+        "body": "iosIconRenderingMode=\"${1|alwaysOriginal,alwaysTemplate,automatic|}\"",
+        "description": [
+            "Gets or set the UIImageRenderingMode of the action bar icons in iOS.",
+            "\n Example:",
+            "<ActionBar iosIconRenderingMode=\"alwaysOriginal\"></ActionBar>",
+            "\n Values:",
+            "- alwaysOriginal (default)",
+            "- alwaysTemplate",
+            "- automatic",
+            "\n"
+        ]
+    },
+    "{N} iOS Icon Overflow Safe Area": {
+        "prefix": "iosOverflowSafeArea",
+        "body": "iosOverflowSafeArea=\"${1|false,true|}\"",
+        "description": [
+            "Instruct container view to expand beyond the safe area on iOS.",
+            "\n Example:",
+            "<ActionBar iosOverflowSafeArea=\"false\"></ActionBar>",
+            "\n Values:",
+            "- false (default)",
+            "- true",
+            "\n"
+        ]
+    },
+    "{N} iOS Icon Overflow Safe Area Enabled": {
+        "prefix": "iosOverflowSafeAreaEnabled",
+        "body": "iosOverflowSafeAreaEnabled=\"${1|true,false|}\"",
+        "description": [
+            "Enables or disables the iosOverflowSafeArea property for all children on iOS.",
+            "\n Example:",
+            "<ActionBar iosOverflowSafeAreaEnabled=\"true\"></ActionBar>",
+            "\n Values:",
+            "- true (default)",
+            "- false",
+            "\n"
+        ]
+    },
+    "{N} iOS ActionItem Position": {
+        "prefix": "ios.position",
+        "body": "ios.position=\"${1|left,right|}\"",
+        "description": [
+            "Sets the position of the ActionItem on iOS.",
+            "\n Example:",
+            "<ActionItem ios.position=\"left\"></ActionItem>",
+            "\n Values:",
+            "- left (default)",
+            "- right",
+            "\n"
+        ]
+    },
+    "{N} Android ActionItem Position": {
+        "prefix": "android.position",
+        "body": "android.position=\"${1|actionBar,popup,actionBarIfRoom|}\"",
+        "description": [
+            "Sets the position of the ActionItem on Android.",
+            "\n Example:",
+            "<ActionItem android.position=\"actionBar\"></ActionItem>",
+            "\n Values:",
+            "- actionBar (default)",
+            "- popup",
+            "- actionBarIfRoom",
+            "\n"
+        ]
+    },
+    "{N} iOS ActionItem SystemIcon": {
+        "prefix": "ios.systemIcon",
+        "body": "ios.systemIcon=\"${1|0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23|}\"",
+        "description": [
+            "Sets the icon of the action item while using UIBarButtonSystemIcon enumeration.",
+            "\n Example:",
+            "<ActionItem ios.systemIcon=\"1\"></ActionItem>",
+            "\n Values:",
+            "- Action - 9",
+            "- Add - 4",
+            "- Bookmarks - 11",
+            "- Camera - 15",
+            "- Cancel - 1",
+            "- Compose - 7",
+            "- Done - 0",
+            "- Edit - 1",
+            "- FastForward - 20",
+            "- FixedSpace - 6",
+            "- FlexibleSpace - 5",
+            "- Organize - 10",
+            "- PageCurl - 23",
+            "- Pause - 18",
+            "- Play - 17",
+            "- Redo - 22",
+            "- Refresh - 13",
+            "- Reply - 8",
+            "- Rewind - 19",
+            "- Save - 3",
+            "- Search - 12",
+            "- Stop - 14",
+            "- Trash - 16",
+            "- Undo - 21",
+            "\n"
+        ]
+    },
+    "{N} Android ActionItem SystemIcon": {
+        "prefix": "android.systemIcon",
+        "body": "android.systemIcon=\"${1}\"",
+        "description": [
+            "Sets the icon of the action item while using Android Drawables.",
+            "\n Example:",
+            "<ActionItem android.systemIcon=\"ic_menu_add\"></ActionItem>",
+            "\n Values:",
+            "Visit https://developer.android.com/reference/android/R.drawable.html to see supported values.",
+            "\n"
+        ]
+    },    
+
+
     // Layouts
-     "{N} Flexbox Layout": {
+    "{N} Flexbox Layout": {
         "prefix": "nsflexbox",
         "body": [
             "<FlexboxLayout>",
@@ -139,6 +284,7 @@
         ]
     },
 
+
     // Views
     "{N} Scroll View": {
         "prefix": "nsscrollview",
@@ -183,12 +329,22 @@
         ]
     },
 
+
     // Widgets
+    
     "{N} Image": {
         "prefix": "nsimg",
-        "body": [
-            "<Image src=\"$1\"></Image>",
-            "$2"
+        "body": "<Image src=\"${1|http://,res://,~/,fonts://|}\"></Image>",
+        "description": [
+            "Shows an image.",
+            "\n Example:",
+            "<Image src=\"res://logo_white_bg\"></Image>",
+            "\n Supports:",
+            "- http:// (url)",
+            "- res:// (resources)",
+            "- ~/ (local images)",
+            "- fonts:// (fonts)",
+            "\n"
         ]
     },
     "{N} Label": {
@@ -285,8 +441,13 @@
     "{N} Activity Indicator": {
         "prefix": "nsloading",
         "body": [
-            "<ActivityIndicator width=\"100\" height=\"100\" [busy]=\"$1\" class=\"activity-indicator\"></ActivityIndicator>",
+            "<ActivityIndicator width=\"100\" height=\"100\" [busy]=\"$1\" (busyChange)=\"onBusyChanged($event)\" class=\"activity-indicator\"></ActivityIndicator>",
             "$2"
+        ],
+        "description": [
+            "ActivityIndicator Properties:",
+            "- busy:boolean - Gets or sets a value indicating whether the widget is currently displaying progress.",            
+            "\n"
         ]
     },
     "{N} Segmented Bar": {
@@ -295,13 +456,50 @@
             "<SegmentedBar [items]=\"$1\" [(ngModel)]=\"$2\">",
             "</SegmentedBar>"
         ]
-    },
+    },    
     "{N} Border": {
         "prefix": "nsborder",
         "body": [
-            "<Border borderRadius=\"$1\" borderWidth=\"$2\" borderColor=\"#000000\">",
-            "    $3",
-            "</Border>"
+            "borderColor=\"${1|red,blue,green,orange,brown,black,yellow,white|}\" borderWidth=\"2\""            
+        ],
+        "description": [
+            "Apply a colored border",
+            "\n Tip: This is helpful for debugging layout issues. :)",
+            "\n"
+        ]
+    },
+
+    // Events
+    "{N} Loaded Event": {
+        "prefix": "nsloaded",
+        "body": "(loaded)=\"$1\"",
+        "description": [
+            "Emitted when the view is loaded.",
+            "\n"
+        ]
+    },
+    "{N} Unloaded Event": {
+        "prefix": "nsunloaded",
+        "body": "(unloaded)=\"$1\"",
+        "description": [
+            "Emitted when the view is unloaded.",
+            "\n"
+        ]
+    },
+    "{N} LayoutChanged Event": {
+        "prefix": "nslayoutChanged",
+        "body": "(layoutChanged)=\"$1\"",
+        "description": [
+            "Emitted when the layout bounds of a view changes due to layout processing.",
+            "\n"
+        ]
+    },
+    "{N} BusyChanged Event": {
+        "prefix": "nsbusychanged",
+        "body": "(busyChanged)=\"$1\"",
+        "description": [
+            "Emitted when the ActivityIndicator busy property is changed.",
+            "\n"
         ]
     },
 
@@ -320,23 +518,65 @@
     },
     "{N} Icon Attribute": {
         "prefix": "icon",
-        "body": "icon=\"res://$1\"$2"
+        "body": "icon=\"${1|res://,~/,fonts://|}\"",
+        "description": [
+            "Gets or sets the icon of the action item",
+            "\n Example:",
+            "<ActionItem icon=\"res://ic_add\"></ActionItem>",
+            "\n Supports:",
+            "- res:// (resources)",
+            "- ~/ (local images)",
+            "- fonts:// (fonts)",
+            "\n"
+        ]
     },
     "{N} Tap Attribute": {
         "prefix": "tap",
         "body": "(tap)=\"$1\"$2"
     },
-	"{N} Text Wrap Attribute": {
+    "{N} Text Wrap Attribute": {
         "prefix": "wrap",
-        "body": "textWrap=\"true\"$2"
+        "body": "textWrap=\"${1|true,false|}\"",
+        "description": [
+            "Gets or sets the text wrap.",
+            "\n Example:",
+            "<Label textWrap=\"false\"></Label>",
+            "\n Values:",
+            "- false (default)",
+            "- true",
+            "\n"
+        ]
     },
     "{N} Horizontal Alignment Attribute": {
-        "prefix": "halign",
-        "body": "horizontalAlignment=\"$1\"$2"
+        "prefix": "halign",        
+        "body": "horizontalAlignment=\"${1|center,left,right,stretch|}\"",
+            "description": [
+                "HorizontalAlignment indicates where an element should be displayed on the horizontal axis relative to the allocated layout slot of the parent element.",
+                "\n Example:",
+                "<Label horizontalAlignment=\"center\"></Label>",
+                "\n Values:",
+                "- stretch (default)",
+                "- center",
+                "- left",
+                "- right",
+                "\n"
+            ]
     },
     "{N} Vertical Alignment Attribute": {
-        "prefix": "valign",
-        "body": "verticalAlignment=\"$1\"$2"
+        "prefix": "valign",        
+        "body": "verticalAlignment=\"${1|center,top,middle,bottom,stretch|}\"",
+            "description": [
+                "VerticalAlignment indicates where an element should be displayed on the horizontal axis relative to the allocated layout slot of the parent element.",
+                "\n Example:",
+                "<Label verticalAlignment=\"center\"></Label>",
+                "\n Values:",
+                "- stretch (default)",
+                "- top",
+                "- center",
+                "- middle",
+                "- bottom",
+                "\n"
+            ]
     },
     "{N} Visibility Attribute": {
         "prefix": "visibility",
@@ -344,11 +584,35 @@
     },
     "{N} Stretch Attribute": {
         "prefix": "stretch",
-        "body": "stretch=\"fill$1\"$2"
+        "body": "stretch=\"${1|aspectFit,none,fill,aspectFill|}\"",
+        "description": [
+            "Gets or sets the image stretch mode.",
+            "\n Example:",
+            "<Image stretch=\"aspectFit\"></Image>",
+            "\n Values:",
+            "- aspectFit (default)",
+            "- none",
+            "- fill",
+            "- aspectFill",
+            "\n"
+        ]
     },
     "{N} Keyboard Type Attribute": {
         "prefix": "kbtype",
-        "body": "keyboardType=\"email$1\"$2"
+        "body": "keyboardType=\"${1|number,email,phone,integer,datetime,url|}\"",
+        "description": [
+            "Gets or sets the keyboard type.",
+            "\n Example:",
+            "<TextField keyboardType=\"number\"></TextField>",
+            "\n Values:",
+            "- number",
+            "- email",
+            "- phone",
+            "- integer",
+            "- datetime",
+            "- url",
+            "\n"
+        ]
     },
     "{N} Row Attribute": {
         "prefix": "row",
