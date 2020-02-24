@@ -69,6 +69,10 @@
             "<ActionBar title=\"Title\" class=\"action-bar\">",
             "  <NavigationButton text=\"Back\" android.systemIcon=\"ic_menu_back\"></NavigationButton>",
             "</ActionBar>"
+        ],
+        "description": [
+            "Creates an ActionBar with a back button",
+            "\n"
         ]
     },
     "{N} Navigation Button": {
@@ -77,9 +81,10 @@
             "<NavigationButton text=\"Back\" android.systemIcon=\"ic_menu_back\"></NavigationButton>"
         ],
         "description": [
-            "NavigationButton Properties:",
+            "Creates a NavigationButton",            
+            "\n NavigationButton Properties:",
             "- text:string - Gets or sets the text of the action item.",
-            "\n - icon:string - Gets or sets the icon of the action item",
+            "- icon:string - Gets or sets the icon of the action item",
             "\n"
         ]
     },
@@ -96,6 +101,10 @@
             "    <Button text=\"Right\" class=\"action-item\"></Button>",
             "  </ActionItem>",
             "</ActionBar>"
+        ],
+        "description": [
+            "Creates an ActionBar with a custom title",
+            "\n"
         ]
     },
 
@@ -236,10 +245,22 @@
     },
     "{N} Stack Layout": {
         "prefix": "nsstack",
-        "body": [
+        "body": [            
             "<StackLayout>",
             "    $1",
             "</StackLayout>"
+        ],
+        "description": [
+            "A Layout that arranges its children horizontally or vertically. The direction can be set by orientation property.",            
+            "\n StackLayout Properties:",
+            "- orientation:string - Gets or sets a value indicating whether the child items should be stacked in the horizontal or vertical direction.",
+            "Possible values are vertical and horizontal.",
+            "The default value is vertical.",
+            "\n StackLayout Events:",
+            "- loaded - Emitted when the view is loaded.",
+            "- unloaded - Emitted when the view is unloaded.",
+            "- layoutChanged - Emitted when the layout bounds of a view changes.",                                 
+            "\n"
         ]
     },
     "{N} Stack Layout Horizontal": {
@@ -262,9 +283,19 @@
         "prefix": "nsabsolute",
         "body": [
             "<AbsoluteLayout>",
-            "    <Label text=\"This is Label 1\" top=\"\" right=\"\" bottom=\"\" left=\"\"></Label>",
-            "    $1",
+            "    <Label text=\"This is Label 1\" top=\"\" left=\"\"></Label>",            
             "</AbsoluteLayout>"
+        ],
+        "description": [
+            "AbsoluteLayout Properties: None",            
+            "\n AbsoluteLayout Child Properties:",
+            "- top:number - Distance in pixels, between the top edge of the child and the top edge of its parent AbsoluteLayout container.",
+            "- left:number - Distance in pixels, between the left edge of the child and the left edge of its parent AbsoluteLayout container.",            
+            "\n AbsoluteLayout Events:",
+            "- loaded - Emitted when the view is loaded.",
+            "- unloaded - Emitted when the view is unloaded.",
+            "- layoutChanged - Emitted when the layout bounds of a view changes.",            
+            "\n"
         ]
     },
     "{N} Dock Layout": {
@@ -273,6 +304,16 @@
             "<DockLayout stretchLastChild=\"true\">",
             "    <Label dock=\"top\" text=\"I am on top!\"></Label>",
             "</DockLayout>"
+        ],
+        "description": [
+            "DockLayout Properties:",
+            "- stretchLastChild:boolean - Gets or sets a value that indicates whether the last child element within a DockLayout stretches to fill the remaining available space.",
+            "The default value is true.",            
+            "\n DockLayout Events:",
+            "- loaded - Emitted when the view is loaded.",
+            "- unloaded - Emitted when the view is unloaded.",
+            "- layoutChanged - Emitted when the layout bounds of a view changes.",            
+            "\n"
         ]
     },
     "{N} Grid Layout": {
@@ -281,23 +322,43 @@
             "<GridLayout rows=\"$1\" columns=\"$2\">",
             "    $3",
             "</GridLayout>"
+        ],
+        "description": [
+            "Creates a GridLayout container. Each value in columns list is a new column. Same with rows.",
+            "\n Example:",
+            "<GridLayout columns=\"*,auto,20\" rows=\"*,auto,20\">",            
+            "</GridLayout>",
+            "\n Columns & Rows Values:",
+            "- * - Takes up the rest of available space",
+            "- auto - Takes up only required space",
+            "- explicit: number - Takes up space allocated. Can be any number.",                      
+            "\n"
         ]
     },
-
 
     // Views
     "{N} Scroll View": {
         "prefix": "nsscrollview",
         "body": [
-            "<ScrollView>",
-            "    $1",
+            "<ScrollView orientation=\"${1|vertical,horizontal|}\">",            
             "</ScrollView>"
+        ],
+        "description": [
+            "ScrollView Properties:",
+            "- orientation:Orientation - Gets or sets direction in which the content can be scrolled.",
+            "Supported values are \"vertical\" (default) and \"horizontal\".",            
+            "\n ScrollView Events:",
+            "- scroll - Emitted when the component is scrolled.",                      
+            "\n Native Components:",
+            "- iOS - NativeScript specific implementation",
+            "- Android - NativeScript specific implementation",            
+            "\n"
         ]
     },
     "{N} List View": {
         "prefix": "nslistview",
         "body": [
-            "<ListView [items]=\"source\" (loaded)=\"onLoaded($event)\" (itemLoading)=\"onItemLoading($event)\" (itemTap)=\"onItemTap($event)\" class=\"list-group\">",
+            "<ListView [items]=\"source\" (loaded)=\"onLoaded($event)\" (itemLoading)=\"onItemLoading($event)\" (itemTap)=\"onItemTap($event)\" class=\"list-group\" separatorColor=\"#E5E5EA\">",
             "    <ng-template let-item=\"item\" let-odd=\"odd\" let-even=\"even\">",
             "      <StackLayout>",
             "        <Label [text]=\"item.title\" class=\"list-group-item\"></Label>",
@@ -305,27 +366,90 @@
             "      </StackLayout>",
             "    </ng-template>",
             "</ListView>"
+        ],
+        "description": [
+            "ListView Properties:",
+            "- text:string - Gets or sets the text of the action item",
+            "\n - items:Array<any> | ItemsSource - Gets or set the items collection of the ListView. The items property can be set to an array or an object defining length and getItem(index) method.",
+            "\n - itemTemplateSelector:function - A function that returns the appropriate ket template based on the data item.",
+            "\n - itemTemplates:Array<KeyedTemplate> - Gets or set the list of item templates for the item template selector.",
+            "\n - separatorColor:string | Color - Gets or set the items separator line color of the ListView.",
+            "\n - rowHeight:Length - Gets or set row height of the ListView.",
+            "\n - iosEstimatedRowHeight:Length - Gets or set the estimated height of rows in the ListView. Default value: 44px",            
+            "\n ListView Methods:",
+            "- refresh() - Forces the ListView to reload all its items.",
+            "\n - scrollToIndex(index: number) - Scrolls the specified item with index into view.",
+            "\n - scrollToIndexAnimated(index: number) - Scrolls the specified item with index into view with animation.",
+            "\n - isItemAtIndexVisible(index: number): boolean - Checks if specified item with index is visible.",                        
+            "\n ListView Events:",
+            "- itemLoading - Emitted when a View for the data at the specified index should be created.",
+            "\n - itemTap - Emitted when a ListView item is tapped.",
+            "\n - loadMoreItems - Emitted when the ListView is scrolled so that its last item is visible.",                        
+            "\n Native Components:",
+            "- iOS - UITableView",
+            "- Android - android.widget.ListView",            
+            "\n"
         ]
     },
     "{N} Tab View": {
         "prefix": "nstabview",
         "body": [
-            "<TabView #tabView>",
-            "  <TabViewItem title=\"Tab 1\">",
-            "    <Label text=\"This is Label in Tab 1\"></Label>",
-            "  </TabViewItem>",
-            "  <TabViewItem title=\"Tab 2\">",
-            "    <Label text=\"This is Label in Tab 2\"></Label>",
-            "  </TabViewItem>",
-            "</TabView>",
-            "$1"
+            "<TabView selectedTabTextColor=\"black\" tabTextColor=\"gray\" tabBackgroundColor=\"lightgray\" androidSelectedTabHighlightColor=\"black\">",
+            "<StackLayout *tabItem=\"{title: 'First Tab', iconSource: 'res://icon', textTransform: 'lowercase'}\" >",
+                "<Label text=\"Tab 1 Content\"></Label>",
+            "</StackLayout>",
+            "<StackLayout *tabItem=\"{title: 'Second Tab', iconSource: 'res://icon', textTransform: 'lowercase'}\" >",
+                "<Label text=\"Tab 2 Content\"></Label>",
+            "</StackLayout>",
+            "</TabView>"            
+        ],
+        "description": [
+            "TabView Properties:",
+            "- androidOffscreenTabLimit:number - Gets or sets the number of tabs that should be retained to either side of the current tab in the view hierarchy in an idle state.",
+            "\n - androidSelectedTabHighlightColor:Color - Gets or sets the color of the horizontal line drawn below the currently selected tab on Android.",
+            "\n - iosIconRenderingMode:Enum - Gets or sets the icon rendering mode on iOS.",
+            "\n - items:Array<TabViewItem> - Gets or sets the items of the TabView.",
+            "\n - selectedIndex:number - Gets or sets the selectedIndex of the TabView.",
+            "\n - selectedTabTextColor:Color - Gets or sets the text color of the selected tab title.",
+            "\n - tabBackgroundColor:Color - Gets or sets the background color of the tabs.",
+            "\n - tabTextColor:Color - Gets or sets the font size of the tabs titles.",
+            "\n - tabTextFontSize:number - Gets or sets the font size of the tabs titles.",            
+            "\n TabView Methods:",
+            "- refresh() - Forces the ListView to reload all its items.",
+            "\n - scrollToIndex(index: number) - Scrolls the specified item with index into view.",
+            "\n - scrollToIndexAnimated(index: number) - Scrolls the specified item with index into view with animation.",
+            "\n - isItemAtIndexVisible(index: number): boolean - Checks if specified item with index is visible.",                        
+            "\n TabView Events:",
+            "- selectedIndexChanged - Emitted when the selectedIndex property is changed.",
+            "- loaded - Emitted when the view is loaded.",
+            "- unloaded - Emitted when the view is unloaded.",
+            "- layoutChanged - Emitted when the layout bounds of a view changes.",            
+            "\n Native Components:",
+            "- iOS - UITabBarController",
+            "- Android - androidx.viewpager.widget.ViewPager",            
+            "\n"
         ]
     },
     "{N} Web View": {
         "prefix": "nswebview",
-        "body": [
-            "<WebView src=\"someUrl | pathToLocalFile | htmlString\"></WebView>",
-            "$1"
+        "body": [            
+            "<WebView src\"${1}\" (loaded)=\"onWebViewLoaded()\"  (touch)=\"webViewTouch()\" (pan)=\"webViewPan()\"></WebView>"       
+        ],
+        "description": [
+            "WebView Properties:",
+            "- src:string - Gets or sets the src.",
+            "Supports url, local file path,or HTML string.",            
+            "\n WebView Methods:",
+            "- reload(): void - Reloads the WebView forcing updating of the content.",            
+            "\n WebView Events:",
+            "- loadStarted - Emitted when the content is starting to load.",
+            "- loadFinished - Emitted when the content loading is over.",
+            "- touch - Emitted when the content is touched.",
+            "- pan - Emitted when the content is panned.",            
+            "\n Native Components:",
+            "- iOS - WKWebView",
+            "- Android - android.webkit.WebView",            
+            "\n"
         ]
     },
 
@@ -406,8 +530,18 @@
     "{N} Progress Bar": {
         "prefix": "nsprogress",
         "body": [
-            "<Progress [value]=\"$1\" class=\"progress\"></Progress>",
-            "$2"
+            "<Progress [value]=\"$1\" [maxValue]=\"$2\" (valueChanged)=\"onValueChanged($event)\" class=\"progress\"></Progress>"            
+        ],
+        "description": [
+            "Progress Properties:",
+            "- value:number - Gets or sets a progress current value.",
+            "\n - maxValue:number - Gets or sets a progress max value.",                        
+            "\n Progress Events:",
+            "- valueChange - Emitted when the value is changed.",                      
+            "\n Native Components:",
+            "- iOS - UIProgressView",
+            "- Android - android.widget.ProgressBar",            
+            "\n"
         ]
     },
     "{N} Slider": {
@@ -434,8 +568,18 @@
     "{N} List Picker": {
         "prefix": "nslistpicker",
         "body": [
-            "<ListPicker [items]=\"$1\" [(ngModel)]=\"$2\"></ListPicker>",
-            "$3"
+            "<ListPicker [items]=\"$1\" [(ngModel)]=\"$2\"></ListPicker>"            
+        ],
+        "description": [
+            "ListPicker Properties:",
+            "- items:string - Gets or set the items collection of the ListPicker. The items property can be set to an array or an object defining length and getItem(index) method.",
+            "\n - selectedIndex:number - Gets or set the index of the selected ListPicker item.",                
+            "\n ListPicker Events:",
+            "- selectedIndexChange - Emitted when the selectedIndex is changed.",                      
+            "\n Native Components:",
+            "- iOS - UIPickerView",
+            "- Android - android.widget.NumberPicker",            
+            "\n"
         ]
     },
     "{N} Activity Indicator": {
@@ -499,6 +643,14 @@
         "body": "(busyChanged)=\"$1\"",
         "description": [
             "Emitted when the ActivityIndicator busy property is changed.",
+            "\n"
+        ]
+    },
+    "{N} SelectedIndexChanged Event": {
+        "prefix": "nsselectedindexchanged",
+        "body": "(selectedIndexChanged)=\"$1\"",
+        "description": [
+            "Emitted when the selectedIndex property is changed.",
             "\n"
         ]
     },
@@ -637,5 +789,164 @@
     "{N} Height Attribute": {
         "prefix": "height",
         "body": "height=\"$1\"$2"
+    },
+    "{N} Dock Attribute": {
+        "prefix": "dock",
+        "body": "dock=\"${1|top,left,right,bottom|}\"",
+        "description": [
+            "Sets how the child view should dock to the parent DockLayout container.",
+            "\n Example:",
+            "<DockLayout>",
+            "<Label dock=\"bottom\"></Label>",
+            "</DockLayout>",
+            "\n Values:",
+            "- top",
+            "- left",
+            "- right",
+            "- bottom",            
+            "\n"
+        ]
+    },
+    "{N} TextTransform Attribute": {
+        "prefix": "textTransform",
+        "body": "textTransform=\"${1|none,capitalize,uppercase,lowercase|}\"",
+        "description": [
+            "Sets how text should be transformed",
+            "\n Example:",            
+            "<Label textTransform=\"lowercase\"></Label>",            
+            "\n Values:",
+            "- none (default)",
+            "- capitalize",
+            "- uppercase",
+            "- lowercase",            
+            "\n"
+        ]
+    },
+    "{N} TextDecoration Attribute": {
+        "prefix": "textDecoration",
+        "body": "textDecoration=\"${1|none,underline,line-through|}\"",
+        "description": [
+            "Sets how text should be decorated",
+            "\n Example:",            
+            "<Label textDecoration=\"underline\"></Label>",            
+            "\n Values:",
+            "- none (default)",
+            "- underline",
+            "- line-through",           
+            "\n"
+        ]
+    },
+    "{N} TextAlignment Attribute": {
+        "prefix": "textAlignment",
+        "body": "textAlignment=\"${1|left,center,right|}\"",
+        "description": [
+            "Sets how text should be aligned",
+            "\n Example:",            
+            "<Label textAlignment=\"center\"></Label>",            
+            "\n Values:",
+            "- left (default)",
+            "- center",
+            "- right",           
+            "\n"
+        ]
+    },
+    "{N} FontWeight Attribute": {
+        "prefix": "fontWeight",
+        "body": "fontWeight=\"${1|normal,bold,100,200,300,400,500,600,700,800,900|}\"",
+        "description": [
+            "Sets the font weight of the matched view.",
+            "Possible values:",
+            "bold|normal",
+            "OR",
+            "100|200|300|400|500|600|700|800|900.",
+            "400 is normal and 700 is bold",
+            "(NOTE: Some fonts do not support all available variants)",
+            "\n Example:",            
+            "<Label fontWeight=\"300\"></Label>",            
+            "\n Values:",
+            "- normal (default)",
+            "- bold",
+            "- 100",
+            "- 200",
+            "- 300",
+            "- 400",
+            "- 500",
+            "- 600",
+            "- 700",
+            "- 800",
+            "- 900",
+            "\n"
+        ]
+    },
+    "{N} FontStyle Attribute": {
+        "prefix": "fontStyle",
+        "body": "fontStyle=\"${1|normal,italic|}\"",
+        "description": [
+            "Sets how text should be styled",
+            "\n Example:",            
+            "<Label fontStyle=\"italic\"></Label>",            
+            "\n Values:",
+            "- normal (default)",
+            "- italic",       
+            "\n"
+        ]
+    },
+    "{N} Orientation Attribute": {
+        "prefix": "orientation",
+        "body": "orientation=\"${1|vertical,horizontal|}\"",
+        "description": [
+            "Sets the orientation of the element",
+            "\n Example:",            
+            "<StackLayout orientation=\"vertical\"></StackLayout>",            
+            "\n Values:",
+            "- vertical (default)",
+            "- horizontal",           
+            "\n"
+        ]
+    },
+    "{N} TabTextColor Attribute": {
+        "prefix": "tabTextColor",
+        "body": "tabTextColor=\"${1}\"",
+        "description": [
+            "Sets the text color of the tabs titles.",
+            "\n Example:",            
+            "<TabView tabTextColor=\"gray\">",            
+            "\n Values:",
+            "- color (gray)",
+            "- hex (#FF0000)",
+            "- rgb (rgb(200,100,200)",
+            "- rgba rgba(200,100,200, 0.5)",
+            "\n"
+        ]
+    },
+    "{N} SelectedTabTextColor Attribute": {
+        "prefix": "selectedTabTextColor",
+        "body": "selectedTabTextColor=\"${1}\"",
+        "description": [
+            "Sets the color of the text, while selecting some of the tabs.",
+            "\n Example:",            
+            "<TabView selectedTabTextColor=\"gray\">",            
+            "\n Values:",
+            "- color (gray)",
+            "- hex (#FF0000)",
+            "- rgb (rgb(200,100,200)",
+            "- rgba rgba(200,100,200, 0.5)",
+            "\n"
+        ]
+    },
+    "{N} TabBackgroundColor Attribute": {
+        "prefix": "tabBackgroundColor",
+        "body": "tabBackgroundColor=\"${1}\"",
+        "description": [
+            "Sets the background color of the tabs.",
+            "\n Example:",            
+            "<TabView tabBackgroundColor=\"gray\">",            
+            "\n Values:",
+            "- color (gray)",
+            "- hex (#FF0000)",
+            "- rgb (rgb(200,100,200)",           
+            "\n"
+        ]
     }
+    
 }

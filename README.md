@@ -1,13 +1,8 @@
 ## NativeScript + Angular Snippets for Visual Studio Code ##
 
-Now compatible with Angular 4.x and above.
-
 This JSON file contains snippets for all NativeScript UI components and some frequently used attributes specifically for use with [nativescript-angular](https://github.com/NativeScript/nativescript-angular).
 
 All UI components are prefixed with ```ns```. Attributes do not have a prefix.
-
-<!-- ![Preview](https://cdn.filestackcontent.com/IcTER9raRgCi8nCQeOZu?v=0) -->
-
 
 
 ### UI Components
@@ -67,6 +62,8 @@ The following can be used inside both TypeScript and HTML view files:
 - col - ```col```
 - width - ```width```
 - height - ```height```
+- dock - ```dock```
+- orientation - ```orientation```
 - ios.position - ```ios.position```
 - ios.systemIcon - ```ios.systemIcon```
 - android.position - ```android.position```
@@ -75,12 +72,24 @@ The following can be used inside both TypeScript and HTML view files:
 - iosOverflowSafeArea - ```iosOverflowSafeArea```
 - iosOverflowSafeAreaEnabled - ```iosOverflowSafeAreaEnabled```
 
+### Styling
+  - textTransform - ```textTransform```
+  - textDecoration- ```textDecoration```
+  - textAlignment - ```textAlignment```
+  - fontWeight - ```fontWeight```
+  - fontStyle - ```fontStyle```
+  - tabTextColor - ```tabTextColor```
+  - selectedTabTextColor - ```selectedTabTextColor```
+  - tabBackgroundColor - ```tabBackgroundColor```
+
 ### Events
 
 - loaded - ```nsloaded```
 - unloaded - ```nsunloaded```
 - layoutChanged - ```nslayoutChanged```
 - busyChange - ```nsbusychanged```
+- selectedIndexChanged - ```nsselectedindexchanged```
+  
 
 
 ## How to use?
@@ -108,10 +117,10 @@ The following can be used inside both TypeScript and HTML view files:
 
 
 # Release Notes
-## 3.0 Feb 23, 2020
+## 3.0 March 2020
 
 ## New Features
-* **Platform Specific ActionItem Support** 
+* **Added Platform Specific ActionItem Support** 
 
 ![Platform Specific ActionItem gif](./images/platform-specific-actionbar.gif)
 
@@ -127,7 +136,9 @@ The following can be used inside both TypeScript and HTML view files:
 
 * **Updated Readme**
 
-* **New Snippets** We hope you'll enjoy some of the new snippets we've added!
+* **New Snippets** 
+
+  We hope you'll enjoy some of the new snippets we've added!
   - `iosIconRenderingMode` 
   - `iosOverflowSafeArea`
   - `iosOverflowSafeAreaEnabled`
@@ -139,8 +150,21 @@ The following can be used inside both TypeScript and HTML view files:
   - `nsunloaded`
   - `nslayoutchanged`
   - `nsbusychanged`
+  - `nsselectedindexchanged`
+  - `dock`
+  - `orientation`
+  - `textTransform`
+  - `textDecoration`
+  - `textAlignment`  
+  - `fontWeight`
+  - `fontStyle`
+  - `tabTextColor`
+  - `selectedTabTextColor`
+  - `tabBackgroundColor`
 
-* **Changed Snippets** Take a second to review the snippets that were changed in this release. Let us know if you have any issues or suggestions!
+* **Changed Snippets** 
+
+  Take a second to review the snippets that were changed in this release. Let us know if you have any issues or suggestions!
   - `nsactionbar`
   - `nsborder` 
   - `stretch`
@@ -149,6 +173,8 @@ The following can be used inside both TypeScript and HTML view files:
   - `halign`
   - `valign`
   - `nsloading`
+  - `nstabview`
+  - `nswebview`  
 
 
 ## Bug fixes
