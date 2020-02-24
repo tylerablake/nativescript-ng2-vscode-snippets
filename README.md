@@ -91,9 +91,9 @@ The following can be used inside both TypeScript and HTML view files:
    ```
    
 2. Type the following in the console window
-  ``` bash
-  ext install nativescript-ng2-snippets
-  ```
+    ``` bash
+    ext install nativescript-ng2-snippets
+    ```
 3. Hit enter.
 
 
@@ -113,9 +113,15 @@ The following can be used inside both TypeScript and HTML view files:
 ## New Features
 * **Platform Specific ActionItem Support** 
 
+![Platform Specific ActionItem gif](./images/platform-specific-actionbar.gif)
+
 * **Added Dropdown Suggestions**
 
-* **Added Descriptions to Snippets**
+![Keyboard Type Dropdown gif](./images/keyboardtype-dropdown.gif)
+
+* **Added Description, Example, and Supported Values to Snippets**
+
+![TextWrap Description image](./images/textwrap-description.png)
 
 * **Added Debug Configuration** To enable the community to help us. To use just hit `F5` and a debug window of VSCode will appear.
 
