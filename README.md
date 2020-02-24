@@ -81,6 +81,8 @@ The following can be used inside both TypeScript and HTML view files:
   - tabTextColor - ```tabTextColor```
   - selectedTabTextColor - ```selectedTabTextColor```
   - tabBackgroundColor - ```tabBackgroundColor```
+  - autocapitalizationType - ```autocapitalizationType```
+  - returnKeyType - ```returnKeyType```
 
 ### Events
 
@@ -161,20 +163,32 @@ The following can be used inside both TypeScript and HTML view files:
   - `tabTextColor`
   - `selectedTabTextColor`
   - `tabBackgroundColor`
+  - `autocapitalizationType`
+  - `returnKeyType`
 
-* **Changed Snippets** 
+* **Updated Snippets**
 
-  Take a second to review the snippets that were changed in this release. Let us know if you have any issues or suggestions!
+  These snippets' implementations were out of date and have now been updated.
   - `nsactionbar`
   - `nsborder` 
-  - `stretch`
-  - `kbtype`
+  - `stretch`  
   - `wrap`  
   - `halign`
   - `valign`
   - `nsloading`
   - `nstabview`
-  - `nswebview`  
+  - `nswebview`
+
+* **Changed Snippets** 
+
+  Take a second to review the snippets that were changed in this release. Let us know if you have any issues or suggestions!
+
+  - `visibility` changed to `visibilityBinding`
+  - `kbType` changed to `keyboardType`
+  - `nsflexbox_column` changed to `nsFlexbox-column`  
+  - `nsstack_horizontal` changed to  `nsStack-horizontal`
+  - `nstextview_editable` changed to `nsTextView-editable`
+  - `nstextview_non-editable` changed to `nsTextView-non-editable`
 
 
 ## Bug fixes

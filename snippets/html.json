@@ -1,7 +1,7 @@
 {
     // Action Bar
     "{N} Action Bar": {
-        "prefix": "nsactionbar",
+        "prefix": "nsActionBar",
         "body": [
             "<ActionBar title=\"Title\" class=\"action-bar\">",
             "</ActionBar>"
@@ -14,7 +14,7 @@
         ]
     },
     "{N} Action Bar with Action Items": {
-        "prefix": "nsactionbaritems",
+        "prefix": "nsActionBarItems",
         "body": [
             "<ActionBar title=\"Title\" class=\"action-bar\">",
             "  <ActionItem (tap)=\"\">",
@@ -27,7 +27,7 @@
         ]
     },
     "{N} Action Item": {
-        "prefix": "nsactionitem",
+        "prefix": "nsActionItem",
         "body": [
             "<ActionItem (tap)=\"\">",
             "  <Button text=\"Left\" class=\"action-item\"></Button>",
@@ -45,7 +45,7 @@
         ]
     },
     "{N} Action Item on the Right": {
-        "prefix": "nsactionitemright",
+        "prefix": "nsActionItemRight",
         "body": [
             "<ActionItem (tap)=\"\" ios.position=\"right\">",
             "  <Button text=\"Right\" class=\"action-item\"></Button>",
@@ -64,7 +64,7 @@
         ]
     },
     "{N} Action Bar with Back": {
-        "prefix": "nsactionbarback",
+        "prefix": "nsActionBarBack",
         "body": [
             "<ActionBar title=\"Title\" class=\"action-bar\">",
             "  <NavigationButton text=\"Back\" android.systemIcon=\"ic_menu_back\"></NavigationButton>",
@@ -76,7 +76,7 @@
         ]
     },
     "{N} Navigation Button": {
-        "prefix": "nsactionbarnavbtn",
+        "prefix": "nsActionBarNavBtn",
         "body": [
             "<NavigationButton text=\"Back\" android.systemIcon=\"ic_menu_back\"></NavigationButton>"
         ],
@@ -89,7 +89,7 @@
         ]
     },
     "{N} Action Bar with Custom Title": {
-        "prefix": "nsactionbarcustomtitle",
+        "prefix": "nsActionBarCustomTitle",
         "body": [
             "<ActionBar class=\"action-bar\">",
             "  <StackLayout orientation=\"horizontal\"",
@@ -228,7 +228,7 @@
 
     // Layouts
     "{N} Flexbox Layout": {
-        "prefix": "nsflexbox",
+        "prefix": "nsFlexbox",
         "body": [
             "<FlexboxLayout>",
             "    $1",
@@ -236,7 +236,7 @@
         ]
     },
     "{N} Flexbox Layout Column": {
-        "prefix": "nsflexbox_column",
+        "prefix": "nsFlexbox-column",
         "body": [
             "<FlexboxLayout flexDirection=\"column\">",
             "    $1",
@@ -244,7 +244,7 @@
         ]
     },
     "{N} Stack Layout": {
-        "prefix": "nsstack",
+        "prefix": "nsStack",
         "body": [            
             "<StackLayout>",
             "    $1",
@@ -264,7 +264,7 @@
         ]
     },
     "{N} Stack Layout Horizontal": {
-        "prefix": "nsstack_horizontal",
+        "prefix": "nsStack-horizontal",
         "body": [
             "<StackLayout orientation=\"horizontal\">",
             "    $1",
@@ -272,7 +272,7 @@
         ]
     },
     "{N} Wrap Layout": {
-        "prefix": "nswrap",
+        "prefix": "nsWrap",
         "body": [
             "<WrapLayout orientation=\"horizontal\" itemWidth=\"$1\" itemHeight=\"$2\">",
             "    $3",
@@ -280,7 +280,7 @@
         ]
     },
     "{N} Absolute Layout": {
-        "prefix": "nsabsolute",
+        "prefix": "nsAbsolute",
         "body": [
             "<AbsoluteLayout>",
             "    <Label text=\"This is Label 1\" top=\"\" left=\"\"></Label>",            
@@ -299,7 +299,7 @@
         ]
     },
     "{N} Dock Layout": {
-        "prefix": "nsdock",
+        "prefix": "nsDock",
         "body": [
             "<DockLayout stretchLastChild=\"true\">",
             "    <Label dock=\"top\" text=\"I am on top!\"></Label>",
@@ -317,7 +317,7 @@
         ]
     },
     "{N} Grid Layout": {
-        "prefix": "nsgrid",
+        "prefix": "nsGrid",
         "body": [
             "<GridLayout rows=\"$1\" columns=\"$2\">",
             "    $3",
@@ -338,7 +338,7 @@
 
     // Views
     "{N} Scroll View": {
-        "prefix": "nsscrollview",
+        "prefix": "nsScrollView",
         "body": [
             "<ScrollView orientation=\"${1|vertical,horizontal|}\">",            
             "</ScrollView>"
@@ -356,7 +356,7 @@
         ]
     },
     "{N} List View": {
-        "prefix": "nslistview",
+        "prefix": "nsListView",
         "body": [
             "<ListView [items]=\"source\" (loaded)=\"onLoaded($event)\" (itemLoading)=\"onItemLoading($event)\" (itemTap)=\"onItemTap($event)\" class=\"list-group\" separatorColor=\"#E5E5EA\">",
             "    <ng-template let-item=\"item\" let-odd=\"odd\" let-even=\"even\">",
@@ -392,7 +392,7 @@
         ]
     },
     "{N} Tab View": {
-        "prefix": "nstabview",
+        "prefix": "nsTabView",
         "body": [
             "<TabView selectedTabTextColor=\"black\" tabTextColor=\"gray\" tabBackgroundColor=\"lightgray\" androidSelectedTabHighlightColor=\"black\">",
             "<StackLayout *tabItem=\"{title: 'First Tab', iconSource: 'res://icon', textTransform: 'lowercase'}\" >",
@@ -431,7 +431,7 @@
         ]
     },
     "{N} Web View": {
-        "prefix": "nswebview",
+        "prefix": "nsWebView",
         "body": [            
             "<WebView src\"${1}\" (loaded)=\"onWebViewLoaded()\"  (touch)=\"webViewTouch()\" (pan)=\"webViewPan()\"></WebView>"       
         ],
@@ -457,7 +457,7 @@
     // Widgets
     
     "{N} Image": {
-        "prefix": "nsimg",
+        "prefix": "nsImg",
         "body": "<Image src=\"${1|http://,res://,~/,fonts://|}\"></Image>",
         "description": [
             "Shows an image.",
@@ -472,63 +472,63 @@
         ]
     },
     "{N} Label": {
-        "prefix": "nslabel",
+        "prefix": "nsLabel",
         "body": [
             "<Label text=\"$1\" textWrap=\"true\"></Label>",
             "$2"
         ]
     },
     "{N} Button": {
-        "prefix": "nsbtn",
+        "prefix": "nsBtn",
         "body": [
             "<Button text=\"$1\" (tap)=\"$2\"></Button>",
             "$3"
         ]
     },
     "{N} Text Field": {
-        "prefix": "nstextfield",
+        "prefix": "nsTextField",
         "body": [
             "<TextField hint=\"$1\" text=\"$2\"></TextField>",
             "$3"
         ]
     },
     "{N} Password Field": {
-        "prefix": "nspassword",
+        "prefix": "nsPassword",
         "body": [
             "<TextField hint=\"Enter your password.\" text=\"$1\" secure=\"true\"></TextField>",
             "$2"
         ]
     },
     "{N} Editable TextView": {
-        "prefix": "nstextview_editable",
+        "prefix": "nsTextView-editable",
         "body": [
             "<TextView hint=\"$1\" text=\"$2\" editable=\"true\"></TextView>",
             "$3"
         ]
     },
     "{N} Non-Editable TextView": {
-        "prefix": "nstextview_non-editable",
+        "prefix": "nsTextView-non-editable",
         "body": [
             "<TextView text=\"$1\" editable=\"false\"></TextView>",
             "$2"
         ]
     },
     "{N} SearchBar": {
-        "prefix": "nssearchbar",
+        "prefix": "nsSearchBar",
         "body": [
             "<SearchBar id=\"${1:searchBar}\" hint=\"${2:Search}\" text=\"$3\" (clear)=\"${4:onClear}\" (submit)=\"${5:onSubmit}\" class=\"search-bar\"></SearchBar>",
             "$6"
         ]
     },
     "{N} Switch": {
-        "prefix": "nsswitch",
+        "prefix": "nsSwitch",
         "body": [
             "<Switch [checked]=\"$1\" class=\"switch\"></Switch>",
             "$2"
         ]
     },
     "{N} Progress Bar": {
-        "prefix": "nsprogress",
+        "prefix": "nsProgress",
         "body": [
             "<Progress [value]=\"$1\" [maxValue]=\"$2\" (valueChanged)=\"onValueChanged($event)\" class=\"progress\"></Progress>"            
         ],
@@ -545,28 +545,28 @@
         ]
     },
     "{N} Slider": {
-        "prefix": "nsslider",
+        "prefix": "nsSlider",
         "body": [
             "<Slider [minValue]=\"$1\" [maxValue]=\"$2\" [value]=\"$3\" class=\"slider\"></Slider>",
             "$4"
         ]
     },
     "{N} Date Picker": {
-        "prefix": "nsdate",
+        "prefix": "nsDate",
         "body": [
             "<DatePicker [day]=\"$1\" [month]=\"$2\" [year]=\"$3\"></DatePicker>",
             "$4"
         ]
     },
     "{N} Time Picker": {
-        "prefix": "nstime",
+        "prefix": "nsTime",
         "body": [
             "<TimePicker [hour]=\"$1\" [minute]=\"$2\"></TimePicker>",
             "$3"
         ]
     },
     "{N} List Picker": {
-        "prefix": "nslistpicker",
+        "prefix": "nsListPicker",
         "body": [
             "<ListPicker [items]=\"$1\" [(ngModel)]=\"$2\"></ListPicker>"            
         ],
@@ -583,7 +583,7 @@
         ]
     },
     "{N} Activity Indicator": {
-        "prefix": "nsloading",
+        "prefix": "nsLoading",
         "body": [
             "<ActivityIndicator width=\"100\" height=\"100\" [busy]=\"$1\" (busyChange)=\"onBusyChanged($event)\" class=\"activity-indicator\"></ActivityIndicator>",
             "$2"
@@ -595,14 +595,14 @@
         ]
     },
     "{N} Segmented Bar": {
-        "prefix": "nssegmentedbar",
+        "prefix": "nsSegmentedBar",
         "body": [
             "<SegmentedBar [items]=\"$1\" [(ngModel)]=\"$2\">",
             "</SegmentedBar>"
         ]
     },    
     "{N} Border": {
-        "prefix": "nsborder",
+        "prefix": "nsBorder",
         "body": [
             "borderColor=\"${1|red,blue,green,orange,brown,black,yellow,white|}\" borderWidth=\"2\""            
         ],
@@ -615,7 +615,7 @@
 
     // Events
     "{N} Loaded Event": {
-        "prefix": "nsloaded",
+        "prefix": "nsLoaded",
         "body": "(loaded)=\"$1\"",
         "description": [
             "Emitted when the view is loaded.",
@@ -623,7 +623,7 @@
         ]
     },
     "{N} Unloaded Event": {
-        "prefix": "nsunloaded",
+        "prefix": "nsUnloaded",
         "body": "(unloaded)=\"$1\"",
         "description": [
             "Emitted when the view is unloaded.",
@@ -631,7 +631,7 @@
         ]
     },
     "{N} LayoutChanged Event": {
-        "prefix": "nslayoutChanged",
+        "prefix": "nsLayoutChanged",
         "body": "(layoutChanged)=\"$1\"",
         "description": [
             "Emitted when the layout bounds of a view changes due to layout processing.",
@@ -639,7 +639,7 @@
         ]
     },
     "{N} BusyChanged Event": {
-        "prefix": "nsbusychanged",
+        "prefix": "nsBusyChanged",
         "body": "(busyChanged)=\"$1\"",
         "description": [
             "Emitted when the ActivityIndicator busy property is changed.",
@@ -647,7 +647,7 @@
         ]
     },
     "{N} SelectedIndexChanged Event": {
-        "prefix": "nsselectedindexchanged",
+        "prefix": "nsSelectedIndexChanged",
         "body": "(selectedIndexChanged)=\"$1\"",
         "description": [
             "Emitted when the selectedIndex property is changed.",
@@ -665,7 +665,7 @@
         "body": "text=\"$1\"$2"
     },
     "{N} Text Binding Attribute": {
-        "prefix": "textbinding",
+        "prefix": "textBinding",
         "body": "[text]=\"$1\"$2"
     },
     "{N} Icon Attribute": {
@@ -732,7 +732,32 @@
     },
     "{N} Visibility Attribute": {
         "prefix": "visibility",
-        "body": "[visibility]=\"isItemVisible ? 'visible' : 'collapsed'\"$2"
+        "body": "visibility=\"${1|visible,collapsed,hidden|}\"",
+        "description": [
+            "Sets the view visibility.",
+            "\n Example:",
+            "<Label visibility=\"hidden\"></Label>",
+            "\n Values:",
+            "- visible (default) - The view is visible.",
+            "- collapsed (or collapse) - The view is not visible and won't take place in the layout.",
+            "- hidden - The view is not visible but will take place in the layout.",
+            "\n"
+        ]
+    },
+
+    "{N} Visibility Binding": {
+        "prefix": "visibilityBinding",
+        "body": "[visibility]=\"isItemVisible ? 'visible' : 'collapsed'\"",
+        "description": [
+            "Bind to the view's visibility.",
+            "\n Example:",
+            "<Label [visibility]=\"isItemVisible ? 'visible' : 'collapsed'\"></Label>",
+            "\n Values:",
+            "- visible (default)",
+            "- collapsed (or collapse)",
+            "- hidden",
+            "\n"
+        ]
     },
     "{N} Stretch Attribute": {
         "prefix": "stretch",
@@ -750,10 +775,10 @@
         ]
     },
     "{N} Keyboard Type Attribute": {
-        "prefix": "kbtype",
+        "prefix": ["kbType", "keyboardType"],
         "body": "keyboardType=\"${1|number,email,phone,integer,datetime,url|}\"",
         "description": [
-            "Gets or sets the keyboard type.",
+            "Gets or sets the keyboard type for a text input.",
             "\n Example:",
             "<TextField keyboardType=\"number\"></TextField>",
             "\n Values:",
@@ -775,11 +800,11 @@
         "body": "col=\"$1\"$2"
     },
     "{N} Colspan Attribute": {
-        "prefix": "colspan",
+        "prefix": "colSpan",
         "body": "colSpan=\"$1\"$2"
     },
     "{N} Rowspan Attribute": {
-        "prefix": "rowspan",
+        "prefix": "rowSpan",
         "body": "rowSpan=\"$1\"$2"
     },
     "{N} Width Attribute": {
@@ -869,10 +894,10 @@
             "- 100",
             "- 200",
             "- 300",
-            "- 400",
+            "- 400 (normal)",
             "- 500",
             "- 600",
-            "- 700",
+            "- 700 (bold)",
             "- 800",
             "- 900",
             "\n"
@@ -888,6 +913,21 @@
             "\n Values:",
             "- normal (default)",
             "- italic",       
+            "\n"
+        ]
+    },
+    "{N} AutocapitalizationType Attribute": {
+        "prefix": "autocapitalizationType",
+        "body": "autocapitalizationType=\"${1|none,words,sentences,allCharacters|}\"",
+        "description": [
+            "Represents the auto-capitalization style for a text input.",
+            "\n Example:",            
+            "<TextField autocapitalizationType=\"words\"></TextField>",            
+            "\n Values:",
+            "- sentences (default) - Capitalize the first letter of each sentence.",
+            "- words - Capitalize the first letter of each word.",            
+            "- allCharacters - Capitalize all characters.",
+            "- none",
             "\n"
         ]
     },
@@ -947,6 +987,22 @@
             "- rgb (rgb(200,100,200)",           
             "\n"
         ]
-    }
+    },
+    "{N} ReturnKeyType Attribute": {
+        "prefix": "returnKeyType",
+        "body": "returnKeyType=\"${1|done,next,go,search,send|}\"",
+        "description": [
+            "Gets or sets the soft keyboard return key text.",
+            "\n Example:",            
+            "<TextField returnKeyType=\"done\"></returnKeyType>",            
+            "\n Values:",
+            "- done",
+            "- next",
+            "- go",
+            "- search",
+            "- send",           
+            "\n"
+        ]
+    },
     
 }
