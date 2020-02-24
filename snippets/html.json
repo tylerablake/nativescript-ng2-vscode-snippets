@@ -554,8 +554,35 @@
     "{N} Date Picker": {
         "prefix": "nsDate",
         "body": [
-            "<DatePicker [day]=\"$1\" [month]=\"$2\" [year]=\"$3\"></DatePicker>",
+            "<DatePicker [day]=\"$1\" [month]=\"$2\" [year]=\"$3\">",
+            "[maxDate]=\"maxDate\" (dateChange)=\"onDateChanged($event)\"",
+            "(dayChange)=\"onDayChanged($event)\"",
+            "(monthChange)=\"onMonthChanged($event)\"",
+            "(yearChange)=\"onYearChanged($event)\"",
+            "(loaded)=\"onDatePickerLoaded($event)\"",
+            "</DatePicker>",
             "$4"
+        ],
+        "description": [
+            "DatePicker Properties:",
+            "- date:Date - Gets or sets the entire date as Date object.",
+            "- minDate:Date - Gets or sets the min date.",
+            "- maxDate:Date - Gets or sets the max date.",
+            "- day:number - Gets or sets the day. The days start at 1.",
+            "- month:number - Gets or sets the month. The months start at 1.",
+            "- year:number - Gets or sets the year.",
+            "\n DatePicker Events:",
+            "- dateChange - Emitted when the date property is changed.",
+            "- dayChange - Emitted when the day property is changed.",
+            "- monthChange - Emitted when the month property is changed.",
+            "- yearChange - Emitted when the year property is changed.",
+            "- loaded - Emitted when the view is loaded.",
+            "- unloaded - Emitted when the view is unloaded.",
+            "- layoutChanged - Emitted when the layout bounds of a view changes.", 
+            "\n Native Components:",
+            "- iOS - UIDatePicker",
+            "- Android - android.widget.DatePicker",            
+            "\n"
         ]
     },
     "{N} Time Picker": {
