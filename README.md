@@ -134,6 +134,17 @@ The following can be used inside both TypeScript and HTML view files:
 
 ![TextWrap Description image](./images/textwrap-description.png)
 
+* **Added Color Coding to Snippet Descriptions** 
+  - Properties 🔵
+  - Methods 🟢
+  - Events 🟠
+  - Values 🟣
+
+<img src="./images/properties-color-coding.png" alt="Properties Color Coding" width="250">
+<img src="./images/methods-color-coding.png" alt="Methods Color Coding" width="250">
+<img src="./images/events-color-coding.png" alt="Events Color Coding" width="250">
+<img src="./images/values-color-coding.png" alt="Values Color Coding" width="250">
+
 * **Added Debug Configuration** To enable the community to help us. To use just hit `F5` and a debug window of VSCode will appear.
 
 * **Updated Readme**
