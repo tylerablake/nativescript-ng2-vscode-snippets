@@ -1,19 +1,20 @@
 {
     // Action Bar
-    "{N} Action Bar": {
+    "{N} ActionBar": {
         "prefix": "nsActionBar",
         "body": [
             "<ActionBar title=\"Title\" class=\"action-bar\">",
             "</ActionBar>"
         ],
         "description": [
+            "{N} ActionBar",
             "ActionBar Properties:",
             "- title:string - Gets or sets the action bar title.",
             "\n - titleView:View - Gets or sets the title view. When set replaces the title with a custom view",
             "\n"
         ]
     },
-    "{N} Action Bar with Action Items": {
+    "{N} ActionBar with Action Items": {
         "prefix": "nsActionBarItems",
         "body": [
             "<ActionBar title=\"Title\" class=\"action-bar\">",
@@ -26,7 +27,7 @@
             "</ActionBar>"
         ]
     },
-    "{N} Action Item": {
+    "{N} ActionItem": {
         "prefix": "nsActionItem",
         "body": [
             "<ActionItem (tap)=\"\">",
@@ -34,6 +35,7 @@
             "</ActionItem>"
         ],
         "description": [
+            "{N} ActionItem",
             "ActionItem Properties:",
             "- text:string - Gets or sets the text of the action item",
             "\n - icon:string - Gets or sets the icon of the action item. Supports local images (~/), resources (res://) and icon fonts (fonts://)",
@@ -44,7 +46,7 @@
             "\n"
         ]
     },
-    "{N} Action Item on the Right": {
+    "{N} ActionItem Right": {
         "prefix": "nsActionItemRight",
         "body": [
             "<ActionItem (tap)=\"\" ios.position=\"right\">",
@@ -52,6 +54,7 @@
             "</ActionItem>"
         ],
         "description": [
+            "{N} ActionItem Right",
             "Create an ActionItem with ios.position=\"right\"",
             "\n ActionItem Properties:",
             "- text:string - Gets or sets the text of the action item",
@@ -63,7 +66,7 @@
             "\n"
         ]
     },
-    "{N} Action Bar with Back": {
+    "{N} ActionBar Back": {
         "prefix": "nsActionBarBack",
         "body": [
             "<ActionBar title=\"Title\" class=\"action-bar\">",
@@ -71,16 +74,18 @@
             "</ActionBar>"
         ],
         "description": [
+            "{N} ActionBar Back",
             "Creates an ActionBar with a back button",
             "\n"
         ]
     },
-    "{N} Navigation Button": {
+    "{N} NavigationButton": {
         "prefix": "nsActionBarNavBtn",
         "body": [
             "<NavigationButton text=\"Back\" android.systemIcon=\"ic_menu_back\"></NavigationButton>"
         ],
         "description": [
+            "{N} NavigationButton",
             "Creates a NavigationButton",            
             "\n NavigationButton Properties:",
             "- text:string - Gets or sets the text of the action item.",
@@ -88,7 +93,7 @@
             "\n"
         ]
     },
-    "{N} Action Bar with Custom Title": {
+    "{N} ActionBar Custom Title": {
         "prefix": "nsActionBarCustomTitle",
         "body": [
             "<ActionBar class=\"action-bar\">",
@@ -103,6 +108,7 @@
             "</ActionBar>"
         ],
         "description": [
+            "{N} ActionBar Custom Title",
             "Creates an ActionBar with a custom title",
             "\n"
         ]
@@ -114,6 +120,7 @@
         "prefix": "iosIconRenderingMode",
         "body": "iosIconRenderingMode=\"${1|alwaysOriginal,alwaysTemplate,automatic|}\"",
         "description": [
+            "{N} iOS Icon Rendering Mode",
             "Gets or set the UIImageRenderingMode of the action bar icons in iOS.",
             "\n Example:",
             "<ActionBar iosIconRenderingMode=\"alwaysOriginal\"></ActionBar>",
@@ -128,6 +135,7 @@
         "prefix": "iosOverflowSafeArea",
         "body": "iosOverflowSafeArea=\"${1|false,true|}\"",
         "description": [
+            "{N} iOS Icon Overflow Safe Area",
             "Instruct container view to expand beyond the safe area on iOS.",
             "\n Example:",
             "<ActionBar iosOverflowSafeArea=\"false\"></ActionBar>",
@@ -141,6 +149,7 @@
         "prefix": "iosOverflowSafeAreaEnabled",
         "body": "iosOverflowSafeAreaEnabled=\"${1|true,false|}\"",
         "description": [
+            "{N} iOS Icon Overflow Safe Area Enabled",
             "Enables or disables the iosOverflowSafeArea property for all children on iOS.",
             "\n Example:",
             "<ActionBar iosOverflowSafeAreaEnabled=\"true\"></ActionBar>",
@@ -154,6 +163,7 @@
         "prefix": "ios.position",
         "body": "ios.position=\"${1|left,right|}\"",
         "description": [
+            "{N} iOS ActionItem Position",
             "Sets the position of the ActionItem on iOS.",
             "\n Example:",
             "<ActionItem ios.position=\"left\"></ActionItem>",
@@ -167,6 +177,7 @@
         "prefix": "android.position",
         "body": "android.position=\"${1|actionBar,popup,actionBarIfRoom|}\"",
         "description": [
+            "{N} Android ActionItem Position",
             "Sets the position of the ActionItem on Android.",
             "\n Example:",
             "<ActionItem android.position=\"actionBar\"></ActionItem>",
@@ -181,6 +192,7 @@
         "prefix": "ios.systemIcon",
         "body": "ios.systemIcon=\"${1|0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23|}\"",
         "description": [
+            "{N} iOS ActionItem SystemIcon",
             "Sets the icon of the action item while using UIBarButtonSystemIcon enumeration.",
             "\n Example:",
             "<ActionItem ios.systemIcon=\"1\"></ActionItem>",
@@ -216,6 +228,7 @@
         "prefix": "android.systemIcon",
         "body": "android.systemIcon=\"${1}\"",
         "description": [
+            "{N} Android ActionItem SystemIcon",
             "Sets the icon of the action item while using Android Drawables.",
             "\n Example:",
             "<ActionItem android.systemIcon=\"ic_menu_add\"></ActionItem>",
@@ -227,7 +240,7 @@
 
 
     // Layouts
-    "{N} Flexbox Layout": {
+    "{N} FlexboxLayout": {
         "prefix": "nsFlexbox",
         "body": [
             "<FlexboxLayout>",
@@ -235,7 +248,7 @@
             "</FlexboxLayout>"
         ]
     },
-    "{N} Flexbox Layout Column": {
+    "{N} FlexboxLayout Column": {
         "prefix": "nsFlexbox-column",
         "body": [
             "<FlexboxLayout flexDirection=\"column\">",
@@ -243,7 +256,7 @@
             "</FlexboxLayout>"
         ]
     },
-    "{N} Stack Layout": {
+    "{N} StackLayout": {
         "prefix": "nsStack",
         "body": [            
             "<StackLayout>",
@@ -251,19 +264,20 @@
             "</StackLayout>"
         ],
         "description": [
+            "{N} StackLayout",
             "A Layout that arranges its children horizontally or vertically. The direction can be set by orientation property.",            
-            "\n StackLayout Properties:",
+            "\n Properties:",
             "- orientation:string - Gets or sets a value indicating whether the child items should be stacked in the horizontal or vertical direction.",
             "Possible values are vertical and horizontal.",
             "The default value is vertical.",
-            "\n StackLayout Events:",
+            "\n Events:",
             "- loaded - Emitted when the view is loaded.",
             "- unloaded - Emitted when the view is unloaded.",
             "- layoutChanged - Emitted when the layout bounds of a view changes.",                                 
             "\n"
         ]
     },
-    "{N} Stack Layout Horizontal": {
+    "{N} StackLayout Horizontal": {
         "prefix": "nsStack-horizontal",
         "body": [
             "<StackLayout orientation=\"horizontal\">",
@@ -271,7 +285,7 @@
             "</StackLayout>"
         ]
     },
-    "{N} Wrap Layout": {
+    "{N} WrapLayout": {
         "prefix": "nsWrap",
         "body": [
             "<WrapLayout orientation=\"horizontal\" itemWidth=\"$1\" itemHeight=\"$2\">",
@@ -279,7 +293,7 @@
             "</WrapLayout>"
         ]
     },
-    "{N} Absolute Layout": {
+    "{N} AbsoluteLayout": {
         "prefix": "nsAbsolute",
         "body": [
             "<AbsoluteLayout>",
@@ -287,18 +301,19 @@
             "</AbsoluteLayout>"
         ],
         "description": [
+            "{N} AbsoluteLayout",
             "AbsoluteLayout Properties: None",            
             "\n AbsoluteLayout Child Properties:",
             "- top:number - Distance in pixels, between the top edge of the child and the top edge of its parent AbsoluteLayout container.",
             "- left:number - Distance in pixels, between the left edge of the child and the left edge of its parent AbsoluteLayout container.",            
-            "\n AbsoluteLayout Events:",
+            "\n Events:",
             "- loaded - Emitted when the view is loaded.",
             "- unloaded - Emitted when the view is unloaded.",
             "- layoutChanged - Emitted when the layout bounds of a view changes.",            
             "\n"
         ]
     },
-    "{N} Dock Layout": {
+    "{N} DockLayout": {
         "prefix": "nsDock",
         "body": [
             "<DockLayout stretchLastChild=\"true\">",
@@ -306,17 +321,18 @@
             "</DockLayout>"
         ],
         "description": [
-            "DockLayout Properties:",
+            "{N} DockLayout",
+            "\n Properties:",
             "- stretchLastChild:boolean - Gets or sets a value that indicates whether the last child element within a DockLayout stretches to fill the remaining available space.",
             "The default value is true.",            
-            "\n DockLayout Events:",
+            "\n Events:",
             "- loaded - Emitted when the view is loaded.",
             "- unloaded - Emitted when the view is unloaded.",
             "- layoutChanged - Emitted when the layout bounds of a view changes.",            
             "\n"
         ]
     },
-    "{N} Grid Layout": {
+    "{N} GridLayout": {
         "prefix": "nsGrid",
         "body": [
             "<GridLayout rows=\"$1\" columns=\"$2\">",
@@ -324,6 +340,7 @@
             "</GridLayout>"
         ],
         "description": [
+            "{N} GridLayout",
             "Creates a GridLayout container. Each value in columns list is a new column. Same with rows.",
             "\n Example:",
             "<GridLayout columns=\"*,auto,20\" rows=\"*,auto,20\">",            
@@ -337,17 +354,18 @@
     },
 
     // Views
-    "{N} Scroll View": {
+    "{N} ScrollView": {
         "prefix": "nsScrollView",
         "body": [
             "<ScrollView orientation=\"${1|vertical,horizontal|}\">",            
             "</ScrollView>"
         ],
         "description": [
-            "ScrollView Properties:",
+            "{N} ScrollView",
+            "\n Properties:",
             "- orientation:Orientation - Gets or sets direction in which the content can be scrolled.",
             "Supported values are \"vertical\" (default) and \"horizontal\".",            
-            "\n ScrollView Events:",
+            "\n Events:",
             "- scroll - Emitted when the component is scrolled.",                      
             "\n Native Components:",
             "- iOS - NativeScript specific implementation",
@@ -355,7 +373,7 @@
             "\n"
         ]
     },
-    "{N} List View": {
+    "{N} ListView": {
         "prefix": "nsListView",
         "body": [
             "<ListView [items]=\"source\" (loaded)=\"onLoaded($event)\" (itemLoading)=\"onItemLoading($event)\" (itemTap)=\"onItemTap($event)\" class=\"list-group\" separatorColor=\"#E5E5EA\">",
@@ -368,7 +386,8 @@
             "</ListView>"
         ],
         "description": [
-            "ListView Properties:",
+            "{N} ListView",
+            "\n Properties:",
             "- text:string - Gets or sets the text of the action item",
             "\n - items:Array<any> | ItemsSource - Gets or set the items collection of the ListView. The items property can be set to an array or an object defining length and getItem(index) method.",
             "\n - itemTemplateSelector:function - A function that returns the appropriate ket template based on the data item.",
@@ -376,12 +395,12 @@
             "\n - separatorColor:string | Color - Gets or set the items separator line color of the ListView.",
             "\n - rowHeight:Length - Gets or set row height of the ListView.",
             "\n - iosEstimatedRowHeight:Length - Gets or set the estimated height of rows in the ListView. Default value: 44px",            
-            "\n ListView Methods:",
+            "\n Methods:",
             "- refresh() - Forces the ListView to reload all its items.",
             "\n - scrollToIndex(index: number) - Scrolls the specified item with index into view.",
             "\n - scrollToIndexAnimated(index: number) - Scrolls the specified item with index into view with animation.",
             "\n - isItemAtIndexVisible(index: number): boolean - Checks if specified item with index is visible.",                        
-            "\n ListView Events:",
+            "\n Events:",
             "- itemLoading - Emitted when a View for the data at the specified index should be created.",
             "\n - itemTap - Emitted when a ListView item is tapped.",
             "\n - loadMoreItems - Emitted when the ListView is scrolled so that its last item is visible.",                        
@@ -391,7 +410,7 @@
             "\n"
         ]
     },
-    "{N} Tab View": {
+    "{N} TabView": {
         "prefix": "nsTabView",
         "body": [
             "<TabView selectedTabTextColor=\"black\" tabTextColor=\"gray\" tabBackgroundColor=\"lightgray\" androidSelectedTabHighlightColor=\"black\">",
@@ -404,7 +423,8 @@
             "</TabView>"            
         ],
         "description": [
-            "TabView Properties:",
+            "{N} TabView",
+            "\n Properties:",
             "- androidOffscreenTabLimit:number - Gets or sets the number of tabs that should be retained to either side of the current tab in the view hierarchy in an idle state.",
             "\n - androidSelectedTabHighlightColor:Color - Gets or sets the color of the horizontal line drawn below the currently selected tab on Android.",
             "\n - iosIconRenderingMode:Enum - Gets or sets the icon rendering mode on iOS.",
@@ -414,12 +434,12 @@
             "\n - tabBackgroundColor:Color - Gets or sets the background color of the tabs.",
             "\n - tabTextColor:Color - Gets or sets the font size of the tabs titles.",
             "\n - tabTextFontSize:number - Gets or sets the font size of the tabs titles.",            
-            "\n TabView Methods:",
+            "\n Methods:",
             "- refresh() - Forces the ListView to reload all its items.",
             "\n - scrollToIndex(index: number) - Scrolls the specified item with index into view.",
             "\n - scrollToIndexAnimated(index: number) - Scrolls the specified item with index into view with animation.",
             "\n - isItemAtIndexVisible(index: number): boolean - Checks if specified item with index is visible.",                        
-            "\n TabView Events:",
+            "\n Events:",
             "- selectedIndexChanged - Emitted when the selectedIndex property is changed.",
             "- loaded - Emitted when the view is loaded.",
             "- unloaded - Emitted when the view is unloaded.",
@@ -430,18 +450,19 @@
             "\n"
         ]
     },
-    "{N} Web View": {
+    "{N} WebView": {
         "prefix": "nsWebView",
         "body": [            
             "<WebView src\"${1}\" (loaded)=\"onWebViewLoaded()\"  (touch)=\"webViewTouch()\" (pan)=\"webViewPan()\"></WebView>"       
         ],
         "description": [
-            "WebView Properties:",
+            "{N} WebView",
+            "\n Properties:",
             "- src:string - Gets or sets the src.",
             "Supports url, local file path,or HTML string.",            
-            "\n WebView Methods:",
+            "\n Methods:",
             "- reload(): void - Reloads the WebView forcing updating of the content.",            
-            "\n WebView Events:",
+            "\n Events:",
             "- loadStarted - Emitted when the content is starting to load.",
             "- loadFinished - Emitted when the content loading is over.",
             "- touch - Emitted when the content is touched.",
@@ -460,6 +481,7 @@
         "prefix": "nsImg",
         "body": "<Image src=\"${1|http://,res://,~/,fonts://|}\"></Image>",
         "description": [
+            "{N} Image",
             "Shows an image.",
             "\n Example:",
             "<Image src=\"res://logo_white_bg\"></Image>",
@@ -485,11 +507,53 @@
             "$3"
         ]
     },
-    "{N} Text Field": {
+    "{N} TextField": {
         "prefix": "nsTextField",
         "body": [
-            "<TextField hint=\"$1\" text=\"$2\"></TextField>",
+           "<TextField hint=\"$1\"",
+           "[text]=\"$2\"",
+           "secure=\"false\"",
+           "editable=\"true\"",
+           "keyboardType=\"number\"",
+           "returnKeyType=\"done\"",           
+           "autocorrect=\"false\"",
+           "maxLength=\"20\"",
+           "(focus)=\"onFocus($event)\"", 
+           "(blur)=\"onBlur($event)\">",
+           "(returnPress)=\"onReturnPress($event)\"",
+            "</TextField>",
             "$3"
+        ],
+        "description": [
+            "{N} TextField",
+            "\n Properties:",
+            "- text:string - Gets or sets the text.",
+            "- hint:string - Gets or sets the text hint.",
+            "- autocapitalizationType:AutocapitalizationType - Gets or sets the autocapitalization type.",
+            "- autocorrect:boolean - Enables or disables autocorrection.",
+            "- keyboardType:KeyboardType - Gets or sets the soft keyboard type.",
+            "- letterSpacing:number - Gets or sets letter space style property.",
+            "- lineHeight:number - Gets or sets line height style property.",
+            "- maxLength:number - Gets or sets the max number of symbols allowed as input.",
+            "- returnKeyType:ReturnKeyType - Gets or sets the soft keyboard return key flavor.",
+            "- secure:boolean - Gets or sets if a text field is for password entry.",
+            "- editable:boolean - Gets or sets if the text field is editable.",            
+            "- textAlignment:boolean - Gets or sets the text alignment.",
+            "- textDecoration:boolean - Gets or sets the text decoration.",
+            "- textTransform:TextTransform - Gets or sets the text transform.",
+            "- whiteSpace:WhiteSpace - Gets or sets the text whitespace.",
+            "\n Methods:",
+            "- focus - Tries to focus the view. Returns a boolean indicating whether this view or one of its descendants actually took focus.",
+            "- dismissSoftInput - Hides the soft input method, ususally a soft keyboard.",            
+            "\n Events:",
+            "- blur - Emitted when the text field is unfocused.",
+            "- focus - Emitted when the text field is focused.",
+            "- returnPress - Emitted when the return key is tapped.",
+            "- textChange - Emitted when there is a new text input.",
+            "\n Native Components:",
+            "- iOS - UITextField",
+            "- Android - android.widget.EditText",            
+            "\n"
         ]
     },
     "{N} Password Field": {
@@ -502,41 +566,143 @@
     "{N} Editable TextView": {
         "prefix": "nsTextView-editable",
         "body": [
-            "<TextView hint=\"$1\" text=\"$2\" editable=\"true\"></TextView>",
+            "<TextView hint=\"$1\"",
+           "[text]=\"$2\"",
+           "editable=\"true\"",
+           "keyboardType=\"number\"",
+           "returnKeyType=\"done\"",
+           "autocorrect=\"false\"",
+           "(focus)=\"onFocus($event)\"", 
+           "(blur)=\"onBlur($event)\">",
+            "</TextView>",
             "$3"
+        ],
+        "description": [
+            "{N} Editable TextView",
+            "\n Properties:",
+            "- text:string - Gets or sets the text.",
+            "- hint:string - Gets or sets the text hint.",
+            "- autocapitalizationType:AutocapitalizationType - Gets or sets the autocapitalization type.",
+            "- autocorrect:boolean - Enables or disables autocorrection.",
+            "- keyboardType:KeyboardType - Gets or sets the soft keyboard type.",
+            "- letterSpacing:number - Gets or sets letter space style property.",
+            "- lineHeight:number - Gets or sets line height style property.",
+            "- maxLength:number - Gets or sets the max number of symbols allowed as input.",
+            "- returnKeyType:ReturnKeyType - Gets or sets the soft keyboard return key flavor.",            
+            "- editable:boolean - Gets or sets if the text field is editable.",            
+            "- textAlignment:boolean - Gets or sets the text alignment.",
+            "- textDecoration:boolean - Gets or sets the text decoration.",
+            "- textTransform:TextTransform - Gets or sets the text transform.",
+            "- whiteSpace:WhiteSpace - Gets or sets the text whitespace.",
+            "\n Methods:",
+            "- focus - Tries to focus the view. Returns a boolean indicating whether this view or one of its descendants actually took focus.",
+            "- dismissSoftInput - Hides the soft input method, ususally a soft keyboard.",            
+            "\n Events:",
+            "- blur - Emitted when the text field is unfocused.",
+            "- focus - Emitted when the text field is focused.",            
+            "- textChange - Emitted when there is a new text input.",
+            "\n Native Components:",
+            "- iOS - UITextView",
+            "- Android - android.widget.EditText",            
+            "\n"
         ]
     },
     "{N} Non-Editable TextView": {
         "prefix": "nsTextView-non-editable",
         "body": [
-            "<TextView text=\"$1\" editable=\"false\"></TextView>",
-            "$2"
+            "<TextView hint=\"$1\"",
+           "[text]=\"$2\"",
+           "editable=\"false\"",
+           "keyboardType=\"number\"",
+           "returnKeyType=\"done\"",
+           "autocorrect=\"false\"",
+           "(focus)=\"onFocus($event)\"", 
+           "(blur)=\"onBlur($event)\">",
+            "</TextView>",
+            "$3"
+        ],
+        "description": [
+            "{N} Non-Editable TextView",
+            "\n Properties:",
+            "- text:string - Gets or sets the text.",
+            "- hint:string - Gets or sets the text hint.",
+            "- autocapitalizationType:AutocapitalizationType - Gets or sets the autocapitalization type.",
+            "- autocorrect:boolean - Enables or disables autocorrection.",
+            "- keyboardType:KeyboardType - Gets or sets the soft keyboard type.",
+            "- letterSpacing:number - Gets or sets letter space style property.",
+            "- lineHeight:number - Gets or sets line height style property.",
+            "- maxLength:number - Gets or sets the max number of symbols allowed as input.",
+            "- returnKeyType:ReturnKeyType - Gets or sets the soft keyboard return key flavor.",            
+            "- editable:boolean - Gets or sets if the text field is editable.",            
+            "- textAlignment:boolean - Gets or sets the text alignment.",
+            "- textDecoration:boolean - Gets or sets the text decoration.",
+            "- textTransform:TextTransform - Gets or sets the text transform.",
+            "- whiteSpace:WhiteSpace - Gets or sets the text whitespace.",
+            "\n Methods:",
+            "- focus - Tries to focus the view. Returns a boolean indicating whether this view or one of its descendants actually took focus.",
+            "- dismissSoftInput - Hides the soft input method, ususally a soft keyboard.",            
+            "\n Events:",
+            "- blur - Emitted when the text field is unfocused.",
+            "- focus - Emitted when the text field is focused.",            
+            "- textChange - Emitted when there is a new text input.",
+            "\n Native Components:",
+            "- iOS - UITextView",
+            "- Android - android.widget.EditText",            
+            "\n"
         ]
     },
     "{N} SearchBar": {
         "prefix": "nsSearchBar",
-        "body": [
-            "<SearchBar id=\"${1:searchBar}\" hint=\"${2:Search}\" text=\"$3\" (clear)=\"${4:onClear}\" (submit)=\"${5:onSubmit}\" class=\"search-bar\"></SearchBar>",
-            "$6"
+        "body": [            
+                "<SearchBar hint=\"$1\"",
+                "[text]=\"$2\" (textChange)=\"onTextChanged($event)\"",
+                "(clear)=\"onClear($event)\" (submit)=\"onSubmit($event)\">",
+            "$3"
+        ],
+        "description": [
+            "{N} SearchBar",
+            "\n Properties:",
+            "- hint:boolean - Gets or sets the text of the search bar text field hint/placeholder.",
+            "- text:boolean - Gets or sets a search bar text.",
+            "\n Events:",
+            "- textChange - Emitted when the text is changed.",
+            "- clear - Emitted when the search is cleared (via the clear button).",
+            "- submit - Emitted when the serach term is submitted.",
+            "\n Native Components:",
+            "- iOS - UISwitch",
+            "- Android - android.widget.Switch",            
+            "\n"
         ]
     },
     "{N} Switch": {
         "prefix": "nsSwitch",
         "body": [
-            "<Switch [checked]=\"$1\" class=\"switch\"></Switch>",
+            "<Switch [checked]=\"$1\" (checkedChange)=\"onCheckedChange($event)\" class=\"switch\"></Switch>",            
             "$2"
+        ],
+        "description": [
+            "{N} Switch",
+            "\n Properties:",
+            "- checked:boolean - Gets or sets if a switch is checked or not.",                                 
+            "\n Events:",
+            "- checkedChange - Emitted when the value is changed.",                      
+            "\n Native Components:",
+            "- iOS - UISwitch",
+            "- Android - android.widget.Switch",            
+            "\n"
         ]
     },
-    "{N} Progress Bar": {
+    "{N} ProgressBar": {
         "prefix": "nsProgress",
         "body": [
             "<Progress [value]=\"$1\" [maxValue]=\"$2\" (valueChanged)=\"onValueChanged($event)\" class=\"progress\"></Progress>"            
         ],
         "description": [
-            "Progress Properties:",
+            "{N} ProgressBar",
+            "\n Properties:",
             "- value:number - Gets or sets a progress current value.",
-            "\n - maxValue:number - Gets or sets a progress max value.",                        
-            "\n Progress Events:",
+            "- maxValue:number - Gets or sets a progress max value.",                        
+            "\n Events:",
             "- valueChange - Emitted when the value is changed.",                      
             "\n Native Components:",
             "- iOS - UIProgressView",
@@ -549,9 +715,22 @@
         "body": [
             "<Slider [minValue]=\"$1\" [maxValue]=\"$2\" [value]=\"$3\" class=\"slider\"></Slider>",
             "$4"
+        ],
+        "description": [
+            "{N} Slider",
+            "\n Properties:",
+            "- value:number - Gets or sets the slider value.",
+            "- minValue:number - Gets or sets the slider min value.",    
+            "- maxValue:number - Gets or sets the slider max value.",                
+            "\n Events:",
+            "- valueChange - Emitted when the slider value is changed.",                      
+            "\n Native Components:",
+            "- iOS - UISlider",
+            "- Android - android.widget.SeekBar",            
+            "\n"
         ]
     },
-    "{N} Date Picker": {
+    "{N} DatePicker": {
         "prefix": "nsDate",
         "body": [
             "<DatePicker [day]=\"$1\" [month]=\"$2\" [year]=\"$3\">",
@@ -564,14 +743,15 @@
             "$4"
         ],
         "description": [
-            "DatePicker Properties:",
+            "{N} DatePicker",
+            "\n Properties:",
             "- date:Date - Gets or sets the entire date as Date object.",
             "- minDate:Date - Gets or sets the min date.",
             "- maxDate:Date - Gets or sets the max date.",
             "- day:number - Gets or sets the day. The days start at 1.",
             "- month:number - Gets or sets the month. The months start at 1.",
             "- year:number - Gets or sets the year.",
-            "\n DatePicker Events:",
+            "\n Events:",
             "- dateChange - Emitted when the date property is changed.",
             "- dayChange - Emitted when the day property is changed.",
             "- monthChange - Emitted when the month property is changed.",
@@ -585,23 +765,48 @@
             "\n"
         ]
     },
-    "{N} Time Picker": {
+    "{N} TimePicker": {
         "prefix": "nsTime",
-        "body": [
-            "<TimePicker [hour]=\"$1\" [minute]=\"$2\"></TimePicker>",
-            "$3"
+        "body": [            
+            "<TimePicker [hour]=\"$1\" [minute]=\"$2\" maxHour=\"$3\"",
+            " maxMinute=\"$4\" minuteInterval=\"$5\" (minuteChange)=\"onMinuteChanged($event)\" ",
+            "(hourChange)=\"onHourChanged($event)\" (timeChange)=\"onTimeChanged($event)\"></TimePicker>"
+        ],
+        "description": [
+            "{N} TimePicker",
+            "\n Properties:",
+            "- minute:number - Gets or sets the time minute.",
+            "- hour:number - Gets or sets the time hour.",
+            "- minMinute:number - Gets or sets the min time minute.",
+            "- maxMinute:number - Gets or sets the max time minute.",                        
+            "- minHour:number - Gets or sets the min time hour.",
+            "- maxHour:number - Gets or sets the max time hour.",            
+            "- minuteInterval:number - Gets or sets the minute interval.",
+            "- time:number - Gets or sets the time while passing a Date object (use it instaed hour and minute).",
+            "\n Events:",
+            "- minuteChange - Emitted when the minute property is changed.",
+            "- hourChange - Emitted when the hour property is changed.",            
+            "- timeChange - Emitted when the hour, minute or time property is changed.",
+            "- loaded - Emitted when the view is loaded.",
+            "- unloaded - Emitted when the view is unloaded.",
+            "- layoutChanged - Emitted when the layout bounds of a view changes.", 
+            "\n Native Components:",
+            "- iOS - UIDatePicker",
+            "- Android - android.widget.TimePicker",            
+            "\n"
         ]
     },
-    "{N} List Picker": {
+    "{N} ListPicker": {
         "prefix": "nsListPicker",
         "body": [
             "<ListPicker [items]=\"$1\" [(ngModel)]=\"$2\"></ListPicker>"            
         ],
         "description": [
-            "ListPicker Properties:",
+            "{N} ListPicker",
+            "\n Properties:",
             "- items:string - Gets or set the items collection of the ListPicker. The items property can be set to an array or an object defining length and getItem(index) method.",
-            "\n - selectedIndex:number - Gets or set the index of the selected ListPicker item.",                
-            "\n ListPicker Events:",
+            "- selectedIndex:number - Gets or set the index of the selected ListPicker item.",                
+            "\n Events:",
             "- selectedIndexChange - Emitted when the selectedIndex is changed.",                      
             "\n Native Components:",
             "- iOS - UIPickerView",
@@ -609,23 +814,38 @@
             "\n"
         ]
     },
-    "{N} Activity Indicator": {
+    "{N} ActivityIndicator": {
         "prefix": "nsLoading",
         "body": [
             "<ActivityIndicator width=\"100\" height=\"100\" [busy]=\"$1\" (busyChange)=\"onBusyChanged($event)\" class=\"activity-indicator\"></ActivityIndicator>",
             "$2"
         ],
         "description": [
-            "ActivityIndicator Properties:",
+            "{N} ActivityIndicator",
+            "Properties:",
             "- busy:boolean - Gets or sets a value indicating whether the widget is currently displaying progress.",            
             "\n"
         ]
     },
-    "{N} Segmented Bar": {
+    "{N} SegmentedBar": {
         "prefix": "nsSegmentedBar",
         "body": [
-            "<SegmentedBar [items]=\"$1\" [(ngModel)]=\"$2\">",
+            "<SegmentedBar [items]=\"$1\"",
+            "selectedIndex=\"0\" (selectedIndexChange)=\"onSelectedIndexChange(event)\">",
             "</SegmentedBar>"
+        ],
+        "description": [
+            "{N} SegmentedBar",
+            "\n Properties:",
+            "- selectedIndex:number - Gets or sets the selected index.",
+            "- items:Array<SegmentedBarItem> - Gets or sets the items.",
+            "- selectedBackgroundColor:Color - Gets or sets the selected background color .",      
+            "\n Events:",
+            "- selectedIndexChange - Emitted when the selectedIndex is changed.",                      
+            "\n Native Components:",
+            "- iOS - UISegmentedControl",
+            "- Android - android.widget.TabHost",            
+            "\n"
         ]
     },    
     "{N} Border": {
@@ -634,6 +854,7 @@
             "borderColor=\"${1|red,blue,green,orange,brown,black,yellow,white|}\" borderWidth=\"2\""            
         ],
         "description": [
+            "{N} Border",
             "Apply a colored border",
             "\n Tip: This is helpful for debugging layout issues. :)",
             "\n"
@@ -645,6 +866,7 @@
         "prefix": "nsLoaded",
         "body": "(loaded)=\"$1\"",
         "description": [
+            "{N} Loaded Event",
             "Emitted when the view is loaded.",
             "\n"
         ]
@@ -653,6 +875,7 @@
         "prefix": "nsUnloaded",
         "body": "(unloaded)=\"$1\"",
         "description": [
+            "{N} Unloaded Event",
             "Emitted when the view is unloaded.",
             "\n"
         ]
@@ -661,6 +884,7 @@
         "prefix": "nsLayoutChanged",
         "body": "(layoutChanged)=\"$1\"",
         "description": [
+            "{N} LayoutChanged Event",
             "Emitted when the layout bounds of a view changes due to layout processing.",
             "\n"
         ]
@@ -669,6 +893,7 @@
         "prefix": "nsBusyChanged",
         "body": "(busyChanged)=\"$1\"",
         "description": [
+            "{N} BusyChanged Event",
             "Emitted when the ActivityIndicator busy property is changed.",
             "\n"
         ]
@@ -677,6 +902,7 @@
         "prefix": "nsSelectedIndexChanged",
         "body": "(selectedIndexChanged)=\"$1\"",
         "description": [
+            "{N} SelectedIndexChanged Event",
             "Emitted when the selectedIndex property is changed.",
             "\n"
         ]
@@ -699,6 +925,7 @@
         "prefix": "icon",
         "body": "icon=\"${1|res://,~/,fonts://|}\"",
         "description": [
+            "{N} Icon Attribute",
             "Gets or sets the icon of the action item",
             "\n Example:",
             "<ActionItem icon=\"res://ic_add\"></ActionItem>",
@@ -713,10 +940,11 @@
         "prefix": "tap",
         "body": "(tap)=\"$1\"$2"
     },
-    "{N} Text Wrap Attribute": {
+    "{N} TextWrap Attribute": {
         "prefix": "wrap",
         "body": "textWrap=\"${1|true,false|}\"",
         "description": [
+            "{N} TextWrap Attribute",
             "Gets or sets the text wrap.",
             "\n Example:",
             "<Label textWrap=\"false\"></Label>",
@@ -726,10 +954,11 @@
             "\n"
         ]
     },
-    "{N} Horizontal Alignment Attribute": {
+    "{N} HorizontalAlignment Attribute": {
         "prefix": "halign",        
         "body": "horizontalAlignment=\"${1|center,left,right,stretch|}\"",
             "description": [
+                "{N} HorizontalAlignment Attribute",
                 "HorizontalAlignment indicates where an element should be displayed on the horizontal axis relative to the allocated layout slot of the parent element.",
                 "\n Example:",
                 "<Label horizontalAlignment=\"center\"></Label>",
@@ -741,10 +970,11 @@
                 "\n"
             ]
     },
-    "{N} Vertical Alignment Attribute": {
+    "{N} VerticalAlignment Attribute": {
         "prefix": "valign",        
         "body": "verticalAlignment=\"${1|center,top,middle,bottom,stretch|}\"",
             "description": [
+                "{N} VerticalAlignment Attribute",
                 "VerticalAlignment indicates where an element should be displayed on the horizontal axis relative to the allocated layout slot of the parent element.",
                 "\n Example:",
                 "<Label verticalAlignment=\"center\"></Label>",
@@ -761,6 +991,7 @@
         "prefix": "visibility",
         "body": "visibility=\"${1|visible,collapsed,hidden|}\"",
         "description": [
+            "{N} Visibility Attribute",
             "Sets the view visibility.",
             "\n Example:",
             "<Label visibility=\"hidden\"></Label>",
@@ -776,6 +1007,7 @@
         "prefix": "visibilityBinding",
         "body": "[visibility]=\"isItemVisible ? 'visible' : 'collapsed'\"",
         "description": [
+            "{N} Visibility Binding",
             "Bind to the view's visibility.",
             "\n Example:",
             "<Label [visibility]=\"isItemVisible ? 'visible' : 'collapsed'\"></Label>",
@@ -790,6 +1022,7 @@
         "prefix": "stretch",
         "body": "stretch=\"${1|aspectFit,none,fill,aspectFill|}\"",
         "description": [
+            "{N} Stretch Attribute",
             "Gets or sets the image stretch mode.",
             "\n Example:",
             "<Image stretch=\"aspectFit\"></Image>",
@@ -801,10 +1034,11 @@
             "\n"
         ]
     },
-    "{N} Keyboard Type Attribute": {
+    "{N} KeyboardType Attribute": {
         "prefix": ["kbType", "keyboardType"],
         "body": "keyboardType=\"${1|number,email,phone,integer,datetime,url|}\"",
         "description": [
+            "{N} KeyboardType Attribute",
             "Gets or sets the keyboard type for a text input.",
             "\n Example:",
             "<TextField keyboardType=\"number\"></TextField>",
@@ -820,32 +1054,33 @@
     },
     "{N} Row Attribute": {
         "prefix": "row",
-        "body": "row=\"$1\"$2"
+        "body": "row=\"$1\""
     },
     "{N} Column Attribute": {
         "prefix": "col",
-        "body": "col=\"$1\"$2"
+        "body": "col=\"$1\""
     },
     "{N} Colspan Attribute": {
         "prefix": "colSpan",
-        "body": "colSpan=\"$1\"$2"
+        "body": "colSpan=\"$1\""
     },
     "{N} Rowspan Attribute": {
         "prefix": "rowSpan",
-        "body": "rowSpan=\"$1\"$2"
+        "body": "rowSpan=\"$1\""
     },
     "{N} Width Attribute": {
         "prefix": "width",
-        "body": "width=\"$1\"$2"
+        "body": "width=\"$1\""
     },
     "{N} Height Attribute": {
         "prefix": "height",
-        "body": "height=\"$1\"$2"
+        "body": "height=\"$1\""
     },
     "{N} Dock Attribute": {
         "prefix": "dock",
         "body": "dock=\"${1|top,left,right,bottom|}\"",
         "description": [
+            "{N} Dock Attribute",
             "Sets how the child view should dock to the parent DockLayout container.",
             "\n Example:",
             "<DockLayout>",
@@ -863,6 +1098,7 @@
         "prefix": "textTransform",
         "body": "textTransform=\"${1|none,capitalize,uppercase,lowercase|}\"",
         "description": [
+            "{N} TextTransform Attribute",
             "Sets how text should be transformed",
             "\n Example:",            
             "<Label textTransform=\"lowercase\"></Label>",            
@@ -878,6 +1114,7 @@
         "prefix": "textDecoration",
         "body": "textDecoration=\"${1|none,underline,line-through|}\"",
         "description": [
+            "{N} TextDecoration Attribute",
             "Sets how text should be decorated",
             "\n Example:",            
             "<Label textDecoration=\"underline\"></Label>",            
@@ -892,6 +1129,7 @@
         "prefix": "textAlignment",
         "body": "textAlignment=\"${1|left,center,right|}\"",
         "description": [
+            "{N} TextAlignment Attribute",
             "Sets how text should be aligned",
             "\n Example:",            
             "<Label textAlignment=\"center\"></Label>",            
@@ -906,6 +1144,7 @@
         "prefix": "fontWeight",
         "body": "fontWeight=\"${1|normal,bold,100,200,300,400,500,600,700,800,900|}\"",
         "description": [
+            "{N} FontWeight Attribute",
             "Sets the font weight of the matched view.",
             "Possible values:",
             "bold|normal",
@@ -934,6 +1173,7 @@
         "prefix": "fontStyle",
         "body": "fontStyle=\"${1|normal,italic|}\"",
         "description": [
+            "{N} FontStyle Attribute",
             "Sets how text should be styled",
             "\n Example:",            
             "<Label fontStyle=\"italic\"></Label>",            
@@ -947,6 +1187,7 @@
         "prefix": "autocapitalizationType",
         "body": "autocapitalizationType=\"${1|none,words,sentences,allCharacters|}\"",
         "description": [
+            "{N} AutocapitalizationType Attribute",
             "Represents the auto-capitalization style for a text input.",
             "\n Example:",            
             "<TextField autocapitalizationType=\"words\"></TextField>",            
@@ -962,6 +1203,7 @@
         "prefix": "orientation",
         "body": "orientation=\"${1|vertical,horizontal|}\"",
         "description": [
+            "{N} Orientation Attribute",
             "Sets the orientation of the element",
             "\n Example:",            
             "<StackLayout orientation=\"vertical\"></StackLayout>",            
@@ -975,6 +1217,7 @@
         "prefix": "tabTextColor",
         "body": "tabTextColor=\"${1}\"",
         "description": [
+            "{N} TabTextColor Attribute",
             "Sets the text color of the tabs titles.",
             "\n Example:",            
             "<TabView tabTextColor=\"gray\">",            
@@ -990,6 +1233,7 @@
         "prefix": "selectedTabTextColor",
         "body": "selectedTabTextColor=\"${1}\"",
         "description": [
+            "{N} SelectedTabTextColor Attribute",
             "Sets the color of the text, while selecting some of the tabs.",
             "\n Example:",            
             "<TabView selectedTabTextColor=\"gray\">",            
@@ -1005,6 +1249,7 @@
         "prefix": "tabBackgroundColor",
         "body": "tabBackgroundColor=\"${1}\"",
         "description": [
+            "{N} TabBackgroundColor Attribute",
             "Sets the background color of the tabs.",
             "\n Example:",            
             "<TabView tabBackgroundColor=\"gray\">",            
@@ -1019,6 +1264,7 @@
         "prefix": "returnKeyType",
         "body": "returnKeyType=\"${1|done,next,go,search,send|}\"",
         "description": [
+            "{N} ReturnKeyType Attribute",
             "Gets or sets the soft keyboard return key text.",
             "\n Example:",            
             "<TextField returnKeyType=\"done\"></returnKeyType>",            
@@ -1030,6 +1276,6 @@
             "- send",           
             "\n"
         ]
-    },
+    }
     
 }
